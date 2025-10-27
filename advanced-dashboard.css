@@ -1,0 +1,923 @@
+/* Advanced Dashboard Animations and Effects */
+
+/* Floating Alerts */
+.floating-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: #00ffff;
+    z-index: 10000;
+    animation: slideInRight 0.3s ease, fadeOut 0.3s ease 3.7s forwards;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.floating-alert .alert-icon {
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Dashboard Particles */
+.dashboard-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dashboard-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #00ffff, transparent);
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Holographic Card Effects */
+.holo-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.holo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.holo-card:hover::before {
+    left: 100%;
+}
+
+.holo-card:hover {
+    border-color: rgba(0, 255, 255, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+/* Quantum Effects */
+.quantum-fluctuation {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    animation: quantumFluctuation 2s ease-out forwards;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes quantumFluctuation {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2) rotate(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(4) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Energy Field Pulse */
+.energy-field {
+    position: relative;
+}
+
+.energy-field.pulse::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    border-radius: inherit;
+    animation: energyPulse 1s ease-out;
+}
+
+@keyframes energyPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Quantum Canvas Enhancements */
+#quantumCanvas, #consciousnessCanvas, #resonanceCanvas {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dimension Mode Effects */
+.holographic-space.3d-mode {
+    transform: perspective(1000px) rotateX(10deg);
+}
+
+.holographic-space.4d-mode {
+    animation: temporalShift 3s ease-in-out infinite;
+}
+
+.holographic-space.quantum-mode {
+    animation: quantumSuperposition 2s ease-in-out infinite alternate;
+}
+
+@keyframes temporalShift {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+}
+
+@keyframes quantumSuperposition {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Control Toggle Effects */
+.control-toggle {
+    width: 50px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-toggle::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.control-toggle.active {
+    background: rgba(0, 255, 255, 0.5);
+}
+
+.control-toggle.active::before {
+    transform: translateX(26px);
+    background: #00ffff;
+}
+
+.toggle-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    animation: rippleEffect 0.6s ease-out;
+}
+
+@keyframes rippleEffect {
+    to {
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+}
+
+/* Threat Modal */
+.threat-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.threat-modal.show {
+    opacity: 1;
+}
+
+.threat-modal .modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    color: #fff;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.8) translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Quantum Button Enhancements */
+.quantum-btn {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 150, 255, 0.2));
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 8px;
+    color: #00ffff;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.quantum-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.quantum-btn:hover::before {
+    left: 100%;
+}
+
+.quantum-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(0, 150, 255, 0.3));
+    border-color: rgba(0, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Advanced Hover Effects */
+.advanced-hover {
+    transition: all 0.3s ease;
+}
+
+.advanced-hover:hover {
+    transform: translateY(-5px) rotateX(2deg);
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Text Glow Effect */
+.text-glow {
+    text-shadow: 0 0 10px currentColor;
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px currentColor; }
+    to { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+/* Magnetic Element Effect */
+.magnetic-element {
+    transition: all 0.3s ease;
+}
+
+.magnetic-element:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Animate In Effects */
+.animate-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: animateIn 0.6s ease forwards;
+}
+
+.animate-in-delay-1 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: animateIn 0.6s ease 0.2s forwards;
+}
+
+.animate-in-delay-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: animateIn 0.6s ease 0.4s forwards;
+}
+
+.animate-in-delay-3 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: animateIn 0.6s ease 0.6s forwards;
+}
+
+@keyframes animateIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+    position: relative;
+    animation: glitch 2s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch-text::before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch-text::after {
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+    2%, 64% { transform: translate(2px, 0) skew(0deg); }
+    4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+    62% { transform: translate(0, 0) skew(5deg); }
+}
+
+@keyframes glitchTop {
+    2%, 64% { transform: translate(2px, -2px); }
+    4%, 60% { transform: translate(-2px, 2px); }
+    62% { transform: translate(13px, -1px) skew(-13deg); }
+}
+
+@keyframes glitchBottom {
+    2%, 64% { transform: translate(-2px, 0); }
+    4%, 60% { transform: translate(-2px, 0); }
+    62% { transform: translate(-22px, 5px) skew(21deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .floating-alert {
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+    
+    .threat-modal .modal-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .dashboard-particles {
+        display: none; /* Reduce particles on mobile for performance */
+    }
+    
+    .advanced-hover:hover {
+        transform: none; /* Disable 3D effects on mobile */
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .floating-alert,
+    .dashboard-particle,
+    .quantum-fluctuation,
+    .text-glow,
+    .glitch-text,
+    .animate-in,
+    .animate-in-delay-1,
+    .animate-in-delay-2,
+    .animate-in-delay-3 {
+        animation: none;
+    }
+    
+    .advanced-hover:hover {
+        transform: none;
+    }
+}
+/* Quantum Security Audit Styles */
+.quantum-audit-interface {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.audit-quantum-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #00ffff;
+    font-weight: 600;
+}
+
+.quantum-orb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #00ffff, #0080ff);
+    box-shadow: 0 0 15px #00ffff;
+    animation: quantumPulse 2s infinite;
+}
+
+@keyframes quantumPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.audit-hologram {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.hologram-metrics {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2rem;
+}
+
+.holo-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.metric-core {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    animation: coreRotate 3s linear infinite;
+}
+
+.holo-metric.critical .metric-core {
+    background: radial-gradient(circle, #ff4444, #ff0000);
+    box-shadow: 0 0 20px #ff4444;
+}
+
+.holo-metric.warning .metric-core {
+    background: radial-gradient(circle, #ffaa00, #ff8800);
+    box-shadow: 0 0 20px #ffaa00;
+}
+
+.holo-metric.safe .metric-core {
+    background: radial-gradient(circle, #00ff88, #00cc66);
+    box-shadow: 0 0 20px #00ff88;
+}
+
+@keyframes coreRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.metric-val {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.metric-lbl {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.quantum-audit-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.quantum-audit-btn {
+    flex: 1;
+    position: relative;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+.btn-quantum-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.quantum-audit-btn:hover .btn-quantum-core {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.quantum-audit-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+.dimensional-security-matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.matrix-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid rgba(0, 255, 255, 0.5);
+}
+
+.matrix-label {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.matrix-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    border-radius: 4px;
+    position: relative;
+    animation: barGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes barGlow {
+    0% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); }
+}
+
+.matrix-score {
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 40px;
+    text-align: right;
+}
+
+/* Canvas Animations */
+#auditCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hologram-metrics {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .quantum-audit-controls {
+        flex-direction: column;
+    }
+    
+    .matrix-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+/* Floating Alert Styles */
+.floating-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: #00ffff;
+    font-weight: 500;
+    z-index: 10000;
+    animation: slideInRight 0.3s ease-out;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.floating-alert .alert-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.floating-alert.fade-out {
+    animation: slideOutRight 0.3s ease-in;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Dashboard Particles */
+.dashboard-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dashboard-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Quantum Fluctuation Effects */
+.quantum-fluctuation {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.3), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    animation: quantumFluctuate 2s ease-out forwards;
+}
+
+@keyframes quantumFluctuate {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(2) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Energy Field Pulse */
+.energy-field.pulse {
+    animation: energyPulse 1s ease-out;
+}
+
+@keyframes energyPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+}
+
+/* Toggle Ripple Effect */
+.toggle-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleExpand 0.6s ease-out;
+}
+
+@keyframes rippleExpand {
+    to {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+/* Threat Modal */
+.threat-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.threat-modal.show {
+    opacity: 1;
+}
+
+.threat-modal .modal-content {
+    background: rgba(0, 20, 40, 0.95);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+}
+
+.threat-modal h3 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.threat-details {
+    margin: 1.5rem 0;
+}
+
+.threat-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.threat-metrics .metric {
+    padding: 0.75rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.threat-modal button {
+    background: rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.threat-modal button:hover {
+    background: rgba(0, 255, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-alert {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .threat-modal .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .threat-metrics {
+        grid-template-columns: 1fr;
+    }
+}

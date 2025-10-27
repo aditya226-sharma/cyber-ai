@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tutorial - CyberShield AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="advanced-animations.css">
+    <link rel="stylesheet" href="quantum-loader.css">
+    <link rel="stylesheet" href="advanced-features.css">
+    <link rel="stylesheet" href="tutorial-advanced.css">
+    <link rel="stylesheet" href="tutorial-enhanced.css">
+    <link rel="stylesheet" href="mobile-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberShield AI</span>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="tutorial.html" class="nav-link active">Tutorial</a>
+                <a href="index.html" class="nav-link">Scanner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="assistant.html" class="nav-link">AI Assistant</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="tutorial.html" class="nav-link active">Tutorial</a>
+            <a href="index.html" class="nav-link">Scanner</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="assistant.html" class="nav-link">AI Assistant</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+
+        <!-- Advanced Tutorial Hero -->
+        <section class="hero energy-field">
+            <div class="hero-content animate-in">
+                <div class="hero-badge holo-card animate-in-delay-1">
+                    <i class="fas fa-graduation-cap text-glow"></i>
+                    <span>Advanced Security Training</span>
+                </div>
+                <h1 class="glitch-text text-glow" data-text="Master CyberShield AI">Master CyberShield AI</h1>
+                <p class="animate-in-delay-2">Comprehensive guide to advanced cybersecurity protection with AI-powered tools and quantum-level security features</p>
+                <div class="tutorial-stats animate-in-delay-3">
+                    <div class="stat holo-card magnetic-element">
+                        <span class="stat-number text-glow" data-count="12">0</span>
+                        <span class="stat-label">Advanced Features</span>
+                    </div>
+                    <div class="stat holo-card magnetic-element">
+                        <span class="stat-number text-glow" data-count="50">0</span>
+                        <span class="stat-label">Tutorial Steps</span>
+                    </div>
+                    <div class="stat holo-card magnetic-element">
+                        <span class="stat-number text-glow" data-count="100">0</span>
+                        <span class="stat-label">% Coverage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- URL Scanner Tutorial -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-globe"></i> URL Scanner Tutorial</h2>
+                <p>Learn how to check websites for threats and malware</p>
+            </div>
+            
+            <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Navigate to Scanner</h4>
+                        <p>Click on "Scanner" in the navigation menu or the "Start Scanning" button</p>
+                        <div class="step-example">
+                            <span class="example-text">Example: Click "Scanner" → Select "Website Scanner" tab</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Enter URL</h4>
+                        <p>Paste the website URL you want to check in the input field</p>
+                        <div class="step-example">
+                            <span class="example-text">Example: https://suspicious-site.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Click Scan</h4>
+                        <p>Press the "Scan Now" button to analyze the website for threats</p>
+                        <div class="step-example">
+                            <span class="example-text">Results: Safe ✅ | Warning ⚠️ | Dangerous ❌</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Analyzer Tutorial -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> Message Analyzer Tutorial</h2>
+                <p>Detect phishing emails and scam messages with AI</p>
+            </div>
+            
+            <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Select Message Tab</h4>
+                        <p>Go to Scanner page and click on "Message Analyzer" tab</p>
+                        <div class="step-example">
+                            <span class="example-text">Location: Scanner → Message Analyzer tab</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Paste Message</h4>
+                        <p>Copy and paste the suspicious email or message content</p>
+                        <div class="step-example">
+                            <span class="example-text">Example: "URGENT: Verify your account now or it will be closed!"</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Analyze Content</h4>
+                        <p>Click "Analyze" to get AI-powered threat assessment</p>
+                        <div class="step-example">
+                            <span class="example-text">AI detects: Phishing keywords, urgency tactics, suspicious links</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phone Checker Tutorial -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-phone"></i> Phone Checker Tutorial</h2>
+                <p>Verify caller safety and detect spam numbers</p>
+            </div>
+            
+            <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Open Phone Checker</h4>
+                        <p>Navigate to Scanner and select "Phone Checker" tab</p>
+                        <div class="step-example">
+                            <span class="example-text">Tab: Phone Checker with phone icon</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Enter Number</h4>
+                        <p>Type the phone number you want to verify</p>
+                        <div class="step-example">
+                            <span class="example-text">Format: +1-555-123-4567 or (555) 123-4567</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Check Results</h4>
+                        <p>Review the safety assessment and spam probability</p>
+                        <div class="step-example">
+                            <span class="example-text">Report: Spam database check, user reports, location analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Tutorial -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Dashboard Tutorial</h2>
+                <p>Monitor global threats and security analytics</p>
+            </div>
+            
+            <div class="tutorial-grid">
+                <div class="tutorial-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h4>Threat Map</h4>
+                    <p>View real-time global cyber threats with interactive world map showing attack locations and severity levels</p>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Analytics</h4>
+                    <p>Track malware blocked, phishing attempts, and users protected with live updating metrics</p>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rss"></i>
+                    </div>
+                    <h4>Live Feed</h4>
+                    <p>Monitor continuous threat alerts and security incidents as they happen worldwide</p>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="card-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4>System Status</h4>
+                    <p>Check AI engine performance, database updates, and overall system health in real-time</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Assistant Tutorial -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-robot text-glow"></i> AI Assistant Tutorial</h2>
+                <p>Master the quantum-powered AI consciousness for cybersecurity guidance</p>
+            </div>
+            
+            <div class="ai-tutorial-advanced">
+                <!-- AI Capabilities Overview -->
+                <div class="ai-capabilities holo-card">
+                    <h3><i class="fas fa-brain text-glow"></i> AI Consciousness Capabilities</h3>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <div class="capability-icon"><i class="fas fa-shield-virus"></i></div>
+                            <h4>Threat Analysis</h4>
+                            <p>Real-time threat detection and risk assessment</p>
+                        </div>
+                        <div class="capability-item">
+                            <div class="capability-icon"><i class="fas fa-microphone"></i></div>
+                            <h4>Voice Recognition</h4>
+                            <p>Natural language processing with voice commands</p>
+                        </div>
+                        <div class="capability-item">
+                            <div class="capability-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Analytics</h4>
+                            <p>Intelligent security metrics and insights</p>
+                        </div>
+                        <div class="capability-item">
+                            <div class="capability-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h4>Learning Mode</h4>
+                            <p>Adaptive responses based on user interactions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Chat Demo -->
+                <div class="chat-demo-container holo-card">
+                    <h3><i class="fas fa-comments text-glow"></i> Interactive Chat Demo</h3>
+                    <div class="demo-chat-interface">
+                        <div class="demo-chat-messages" id="demo-chat">
+                            <div class="demo-message ai">
+                                <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                                <div class="message-content">
+                                    <span>👋 Hello! I'm your AI cybersecurity assistant. Try asking me about security topics!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-chat-input">
+                            <input type="text" id="demo-input" placeholder="Ask me about cybersecurity..." onkeypress="handleDemoEnter(event)">
+                            <button onclick="sendDemoMessage()" class="quantum-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Topics Grid -->
+                <div class="quick-topics holo-card">
+                    <h3><i class="fas fa-bolt text-glow"></i> Quick Topic Examples</h3>
+                    <div class="topics-grid">
+                        <button class="topic-btn quantum-btn" onclick="askQuickTopic('phishing')">
+                            <i class="fas fa-fish"></i> Phishing Detection
+                        </button>
+                        <button class="topic-btn quantum-btn" onclick="askQuickTopic('passwords')">
+                            <i class="fas fa-key"></i> Password Security
+                        </button>
+                        <button class="topic-btn quantum-btn" onclick="askQuickTopic('2fa')">
+                            <i class="fas fa-shield-alt"></i> Two-Factor Auth
+                        </button>
+                        <button class="topic-btn quantum-btn" onclick="askQuickTopic('malware')">
+                            <i class="fas fa-virus"></i> Malware Protection
+                        </button>
+                        <button class="topic-btn quantum-btn" onclick="askQuickTopic('wifi')">
+                            <i class="fas fa-wifi"></i> WiFi Security
+                        </button>
+                        <button class="topic-btn quantum-btn" onclick="askQuickTopic('social')">
+                            <i class="fas fa-users"></i> Social Engineering
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Voice Commands Tutorial -->
+                <div class="voice-tutorial holo-card">
+                    <h3><i class="fas fa-microphone-alt text-glow"></i> Voice Commands Tutorial</h3>
+                    <div class="voice-commands-list">
+                        <div class="voice-command">
+                            <div class="command-trigger">"Hey CyberShield"</div>
+                            <div class="command-description">Activate voice mode</div>
+                        </div>
+                        <div class="voice-command">
+                            <div class="command-trigger">"Scan this URL"</div>
+                            <div class="command-description">Open URL scanner</div>
+                        </div>
+                        <div class="voice-command">
+                            <div class="command-trigger">"Check my security"</div>
+                            <div class="command-description">Run security audit</div>
+                        </div>
+                        <div class="voice-command">
+                            <div class="command-trigger">"Show dashboard"</div>
+                            <div class="command-description">Navigate to dashboard</div>
+                        </div>
+                    </div>
+                    <button class="try-voice-btn quantum-btn" onclick="tryVoiceDemo()">
+                        <i class="fas fa-microphone"></i> Try Voice Demo
+                    </button>
+                </div>
+                
+                <!-- AI Features Walkthrough -->
+                <div class="ai-walkthrough holo-card">
+                    <h3><i class="fas fa-route text-glow"></i> Step-by-Step AI Usage</h3>
+                    <div class="walkthrough-steps">
+                        <div class="walkthrough-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Access AI Assistant</h4>
+                                <p>Navigate to AI Assistant page or use the floating AI help button</p>
+                                <div class="step-visual">
+                                    <i class="fas fa-mouse-pointer"></i> Click "AI Assistant" in navigation
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="walkthrough-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Choose Interaction Method</h4>
+                                <p>Type your question, use voice commands, or select quick topics</p>
+                                <div class="step-visual">
+                                    <i class="fas fa-keyboard"></i> Type | <i class="fas fa-microphone"></i> Voice | <i class="fas fa-mouse"></i> Click
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="walkthrough-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Get Intelligent Response</h4>
+                                <p>Receive detailed, context-aware cybersecurity guidance</p>
+                                <div class="step-visual">
+                                    <i class="fas fa-brain"></i> AI analyzes and responds instantly
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="walkthrough-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Follow-up Actions</h4>
+                                <p>Ask follow-up questions or request specific security actions</p>
+                                <div class="step-visual">
+                                    <i class="fas fa-comments"></i> Continue conversation naturally
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced AI Features -->
+                <div class="advanced-ai-features holo-card">
+                    <h3><i class="fas fa-cogs text-glow"></i> Advanced AI Features</h3>
+                    <div class="features-showcase">
+                        <div class="feature-showcase">
+                            <div class="feature-icon energy-field">
+                                <i class="fas fa-chart-pie text-glow"></i>
+                            </div>
+                            <h4>Real-time Analytics</h4>
+                            <p>Monitor conversation metrics, response accuracy, and user satisfaction in real-time</p>
+                            <button class="feature-demo-btn quantum-btn" onclick="showAnalyticsDemo()">View Analytics</button>
+                        </div>
+                        
+                        <div class="feature-showcase">
+                            <div class="feature-icon energy-field">
+                                <i class="fas fa-memory text-glow"></i>
+                            </div>
+                            <h4>Context Memory</h4>
+                            <p>AI remembers conversation context and provides personalized security recommendations</p>
+                            <button class="feature-demo-btn quantum-btn" onclick="showMemoryDemo()">Test Memory</button>
+                        </div>
+                        
+                        <div class="feature-showcase">
+                            <div class="feature-icon energy-field">
+                                <i class="fas fa-language text-glow"></i>
+                            </div>
+                            <h4>Multi-language Support</h4>
+                            <p>Communicate in multiple languages with automatic translation capabilities</p>
+                            <button class="feature-demo-btn quantum-btn" onclick="showLanguageDemo()">Try Languages</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pro Tips for AI Usage -->
+                <div class="ai-pro-tips holo-card">
+                    <h3><i class="fas fa-star text-glow"></i> Pro Tips for AI Interaction</h3>
+                    <div class="pro-tips-list">
+                        <div class="pro-tip">
+                            <div class="tip-icon"><i class="fas fa-bullseye"></i></div>
+                            <div class="tip-content">
+                                <h4>Be Specific</h4>
+                                <p>Ask detailed questions for more accurate and helpful responses</p>
+                                <div class="tip-example">Good: "How to secure my home WiFi router?" vs Bad: "WiFi help"</div>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-tip">
+                            <div class="tip-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="tip-content">
+                                <h4>Use Context</h4>
+                                <p>Provide context about your situation for personalized advice</p>
+                                <div class="tip-example">"I work from home and need to secure my network for business use"</div>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-tip">
+                            <div class="tip-icon"><i class="fas fa-comments"></i></div>
+                            <div class="tip-content">
+                                <h4>Follow Up</h4>
+                                <p>Ask follow-up questions to dive deeper into security topics</p>
+                                <div class="tip-example">"Can you explain more about VPN protocols?"</div>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-tip">
+                            <div class="tip-icon"><i class="fas fa-microphone"></i></div>
+                            <div class="tip-content">
+                                <h4>Try Voice Mode</h4>
+                                <p>Use voice commands for hands-free security assistance</p>
+                                <div class="tip-example">Perfect for multitasking while getting security help</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Features Tutorial -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-rocket text-glow"></i> Advanced Features Tutorial</h2>
+                <p>Master the cutting-edge capabilities of CyberShield AI</p>
+            </div>
+            
+            <div class="advanced-features-grid">
+                <div class="feature-tutorial holo-card advanced-hover">
+                    <div class="feature-icon energy-field">
+                        <i class="fas fa-microphone text-glow"></i>
+                    </div>
+                    <h4>Voice Commands</h4>
+                    <p>Control CyberShield AI with voice commands</p>
+                    <div class="tutorial-steps-mini">
+                        <div class="mini-step">1. Click microphone button</div>
+                        <div class="mini-step">2. Say "scan URL" or "AI assistant"</div>
+                        <div class="mini-step">3. Watch command execute automatically</div>
+                    </div>
+                    <button class="try-btn quantum-btn" onclick="tryVoiceCommand()">Try Voice Command</button>
+                </div>
+                
+                <div class="feature-tutorial holo-card advanced-hover">
+                    <div class="feature-icon energy-field">
+                        <i class="fas fa-file-upload text-glow"></i>
+                    </div>
+                    <h4>File Scanner</h4>
+                    <p>Drag & drop files for instant security analysis</p>
+                    <div class="tutorial-steps-mini">
+                        <div class="mini-step">1. Drag files to drop zone</div>
+                        <div class="mini-step">2. Multiple files supported</div>
+                        <div class="mini-step">3. Get instant threat results</div>
+                    </div>
+                    <button class="try-btn quantum-btn" onclick="showFileScanner()">Try File Scanner</button>
+                </div>
+                
+                <div class="feature-tutorial holo-card advanced-hover">
+                    <div class="feature-icon energy-field">
+                        <i class="fas fa-key text-glow"></i>
+                    </div>
+                    <h4>Password Generator</h4>
+                    <p>Generate quantum-secure passwords</p>
+                    <div class="tutorial-steps-mini">
+                        <div class="mini-step">1. Set length and options</div>
+                        <div class="mini-step">2. Generate secure password</div>
+                        <div class="mini-step">3. Copy with one click</div>
+                    </div>
+                    <button class="try-btn quantum-btn" onclick="openPasswordGenerator()">Generate Password</button>
+                </div>
+                
+                <div class="feature-tutorial holo-card advanced-hover">
+                    <div class="feature-icon energy-field">
+                        <i class="fas fa-network-wired text-glow"></i>
+                    </div>
+                    <h4>Network Monitor</h4>
+                    <p>Real-time network threat monitoring</p>
+                    <div class="tutorial-steps-mini">
+                        <div class="mini-step">1. Auto-monitors connections</div>
+                        <div class="mini-step">2. Tracks bandwidth usage</div>
+                        <div class="mini-step">3. Blocks threats in real-time</div>
+                    </div>
+                    <button class="try-btn quantum-btn" onclick="showNetworkMonitor()">View Monitor</button>
+                </div>
+                
+                <div class="feature-tutorial holo-card advanced-hover">
+                    <div class="feature-icon energy-field">
+                        <i class="fas fa-bug text-glow"></i>
+                    </div>
+                    <h4>Vulnerability Scanner</h4>
+                    <p>Comprehensive system security audit</p>
+                    <div class="tutorial-steps-mini">
+                        <div class="mini-step">1. Select scan categories</div>
+                        <div class="mini-step">2. Run vulnerability scan</div>
+                        <div class="mini-step">3. Review detailed results</div>
+                    </div>
+                    <button class="try-btn quantum-btn" onclick="startVulnScan()">Start Scan</button>
+                </div>
+                
+                <div class="feature-tutorial holo-card advanced-hover">
+                    <div class="feature-icon energy-field">
+                        <i class="fas fa-shield-check text-glow"></i>
+                    </div>
+                    <h4>Security Audit</h4>
+                    <p>Complete security assessment and scoring</p>
+                    <div class="tutorial-steps-mini">
+                        <div class="mini-step">1. Automated security check</div>
+                        <div class="mini-step">2. Get security score (0-100)</div>
+                        <div class="mini-step">3. Download detailed report</div>
+                    </div>
+                    <button class="try-btn quantum-btn" onclick="runSecurityAudit()">Run Audit</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Demo Section -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-play-circle text-glow"></i> Interactive Demos</h2>
+                <p>Try these live demonstrations to experience CyberShield AI</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-card holo-card">
+                    <h4>🎯 Threat Detection Demo</h4>
+                    <p>Watch AI analyze and detect threats in real-time</p>
+                    <div class="demo-simulation" id="threat-demo">
+                        <div class="demo-step active">Scanning URL...</div>
+                        <div class="demo-step">Analyzing SSL certificate...</div>
+                        <div class="demo-step">Checking threat database...</div>
+                        <div class="demo-step">AI pattern recognition...</div>
+                        <div class="demo-result">⚠️ Potential phishing site detected!</div>
+                    </div>
+                    <button class="demo-btn quantum-btn" onclick="runThreatDemo()">Run Demo</button>
+                </div>
+                
+                <div class="demo-card holo-card">
+                    <h4>🧠 AI Analysis Demo</h4>
+                    <p>See how AI processes and analyzes security data</p>
+                    <div class="demo-simulation" id="ai-demo">
+                        <div class="demo-step active">Processing message content...</div>
+                        <div class="demo-step">NLP sentiment analysis...</div>
+                        <div class="demo-step">Pattern matching...</div>
+                        <div class="demo-step">Risk assessment...</div>
+                        <div class="demo-result">✅ Message appears legitimate</div>
+                    </div>
+                    <button class="demo-btn quantum-btn" onclick="runAIDemo()">Run Demo</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Test Cases Section -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-vial text-glow"></i> Advanced Test Cases</h2>
+                <p>Practice with these examples to master CyberShield AI</p>
+            </div>
+            
+            <div class="test-cases-advanced">
+                <div class="test-category holo-card">
+                    <h4><i class="fas fa-globe"></i> URL Scanner Tests</h4>
+                    <div class="test-items">
+                        <div class="test-item safe" onclick="testURL('https://google.com')">✅ Safe: https://google.com</div>
+                        <div class="test-item danger" onclick="testURL('https://paypal-secure.com')">❌ Dangerous: https://paypal-secure.com</div>
+                        <div class="test-item warning" onclick="testURL('http://example.com')">⚠️ Warning: http://example.com</div>
+                        <div class="test-item danger" onclick="testURL('https://bank-verify-login.com')">❌ Phishing: https://bank-verify-login.com</div>
+                    </div>
+                </div>
+                
+                <div class="test-category holo-card">
+                    <h4><i class="fas fa-envelope"></i> Message Analysis Tests</h4>
+                    <div class="test-items">
+                        <div class="test-item safe" onclick="testMessage('Hello, how are you today?')">✅ Safe: "Hello, how are you today?"</div>
+                        <div class="test-item danger" onclick="testMessage('URGENT: Verify your account now or it will be suspended!')">❌ Phishing: "URGENT: Verify account now!"</div>
+                        <div class="test-item warning" onclick="testMessage('Click here to update your password for security')">⚠️ Suspicious: "Click to update password"</div>
+                        <div class="test-item danger" onclick="testMessage('Send $500 via wire transfer immediately to claim your prize')">❌ Scam: "Send money to claim prize"</div>
+                    </div>
+                </div>
+                
+                <div class="test-category holo-card">
+                    <h4><i class="fas fa-phone"></i> Phone Verification Tests</h4>
+                    <div class="test-items">
+                        <div class="test-item safe" onclick="testPhone('+1-202-555-0123')">✅ Safe: +1-202-555-0123</div>
+                        <div class="test-item danger" onclick="testPhone('+1-555-SCAM-123')">❌ Spam: +1-555-SCAM-123</div>
+                        <div class="test-item warning" onclick="testPhone('+1-800-000-0000')">⚠️ Suspicious: +1-800-000-0000</div>
+                        <div class="test-item danger" onclick="testPhone('+1-800-FRAUD-123')">❌ Fraud: +1-800-FRAUD-123</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pro Tips Section -->
+        <section class="tutorial-section">
+            <div class="section-header">
+                <h2><i class="fas fa-lightbulb text-glow"></i> Pro Security Tips</h2>
+                <p>Expert cybersecurity advice from CyberShield AI</p>
+            </div>
+            
+            <div class="pro-tips-grid">
+                <div class="tip-card holo-card advanced-hover">
+                    <div class="tip-icon">
+                        <i class="fas fa-eye text-glow"></i>
+                    </div>
+                    <h4>Always Verify</h4>
+                    <p>Never trust emails or messages asking for personal information. Always verify through official channels before taking action.</p>
+                </div>
+                
+                <div class="tip-card holo-card advanced-hover">
+                    <div class="tip-icon">
+                        <i class="fas fa-lock text-glow"></i>
+                    </div>
+                    <h4>Strong Passwords</h4>
+                    <p>Use unique, complex passwords for each account. Enable 2FA wherever possible and use a password manager.</p>
+                </div>
+                
+                <div class="tip-card holo-card advanced-hover">
+                    <div class="tip-icon">
+                        <i class="fas fa-sync text-glow"></i>
+                    </div>
+                    <h4>Keep Updated</h4>
+                    <p>Regularly update your software, operating system, and security tools to protect against latest threats.</p>
+                </div>
+                
+                <div class="tip-card holo-card advanced-hover">
+                    <div class="tip-icon">
+                        <i class="fas fa-wifi text-glow"></i>
+                    </div>
+                    <h4>Secure Networks</h4>
+                    <p>Avoid public Wi-Fi for sensitive activities. Use VPN when necessary and ensure network security at home.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Help Box -->
+        <div class="ai-help-box" id="ai-help-box">
+            <div class="help-toggle" onclick="toggleHelpBox()">
+                <i class="fas fa-robot"></i>
+                <span>AI Help</span>
+            </div>
+            <div class="help-content" id="help-content">
+                <div class="help-header">
+                    <div class="help-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="help-info">
+                        <h4>CyberBot Assistant</h4>
+                        <p>Quick cybersecurity help</p>
+                    </div>
+                    <button class="help-close" onclick="toggleHelpBox()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="help-chat" id="help-chat">
+                    <div class="help-message bot">
+                        <div class="help-msg-content">
+                            👋 Hi! Need help with the tutorial? Ask me anything!
+                        </div>
+                    </div>
+                </div>
+                <div class="help-input-group">
+                    <input type="text" id="help-input" placeholder="Ask about tutorials...">
+                    <button class="help-send" onclick="sendHelpMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mobile-responsive.js"></script>
+    <script src="simple-ai.js"></script>
+    <script src="script.js"></script>
+    <script src="advanced-effects.js"></script>
+    <script src="advanced-features.js"></script>
+    <script src="tutorial-advanced.js"></script>
+    <script src="tutorial-enhanced.js"></script>
+    <script src="fix.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - CyberShield AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quantum-pages.css">
+    <link rel="stylesheet" href="advanced-pages.css">
+    <link rel="stylesheet" href="assistant-advanced.css">
+    <link rel="stylesheet" href="user-message.css">
+    <link rel="stylesheet" href="advanced-ai.css">
+    <link rel="stylesheet" href="enhanced-ai.css">
+    <link rel="stylesheet" href="ai-particles.css">
+    <link rel="stylesheet" href="mobile-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberShield AI</span>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="tutorial.html" class="nav-link">Tutorial</a>
+                <a href="index.html" class="nav-link">Scanner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="assistant.html" class="nav-link active">AI Assistant</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="tutorial.html" class="nav-link">Tutorial</a>
+            <a href="index.html" class="nav-link">Scanner</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="assistant.html" class="nav-link active">AI Assistant</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+
+        <!-- Floating Particles -->
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <!-- Advanced AI Interface -->
+        <section class="ai-interface">
+            <div class="interface-container">
+                <div class="ai-header">
+                    <div class="ai-status-panel">
+                        <div class="status-orb">
+                            <div class="orb-core"></div>
+                            <div class="orb-pulse"></div>
+                        </div>
+                        <div class="status-info">
+                            <h2 class="ai-title">CyberShield AI Assistant</h2>
+                            <p class="ai-subtitle">Advanced Neural Network • Real-time Security Intelligence</p>
+                            <div class="ai-metrics">
+                                <span class="metric"><i class="fas fa-brain"></i> IQ: ∞</span>
+                                <span class="metric"><i class="fas fa-bolt"></i> 847K ops/sec</span>
+                                <span class="metric"><i class="fas fa-shield-alt"></i> 99.9% accuracy</span>
+                            </div>
+                        </div>
+                        <div class="ai-controls">
+                            <button class="control-btn" onclick="toggleAIMode('creative')" title="Creative Mode">
+                                <i class="fas fa-lightbulb"></i>
+                            </button>
+                            <button class="control-btn" onclick="toggleAIMode('analysis')" title="Analysis Mode">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="control-btn" onclick="runDiagnostics()" title="Run Diagnostics">
+                                <i class="fas fa-stethoscope"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-core">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <div class="ai-avatar">
+                                <div class="avatar-glow"></div>
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="ai-info">
+                                <h3>CyberShield AI</h3>
+                                <p class="ai-status">Online • Ready to assist</p>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="action-btn" onclick="clearChat()" title="Clear Chat">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="action-btn" onclick="exportChat()" title="Export Chat">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="action-btn" onclick="toggleVoiceInput()" title="Voice Input">
+                                    <i class="fas fa-microphone"></i>
+                                </button>
+                            </div>
+                        </div>
+                    
+                        <div class="quick-actions">
+                            <button class="quick-btn" onclick="quickQuery('How to identify phishing emails?')">
+                                <i class="fas fa-envelope"></i>
+                                <span>Phishing Detection</span>
+                            </button>
+                            <button class="quick-btn" onclick="quickQuery('Best password practices')">
+                                <i class="fas fa-key"></i>
+                                <span>Password Security</span>
+                            </button>
+                            <button class="quick-btn" onclick="quickQuery('What is two-factor authentication?')">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>2FA Guide</span>
+                            </button>
+                            <button class="quick-btn" onclick="quickQuery('Latest cybersecurity threats')">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Threat Updates</span>
+                            </button>
+                        </div>
+                        
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message ai-message">
+                                <div class="message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="message-bubble">
+                                    <div class="message-content">
+                                        👋 Hello! I'm your advanced cybersecurity AI assistant. I can help you with:
+                                        <div class="topic-grid">
+                                            <div class="topic-card" onclick="quickQuery('Threat analysis')">
+                                                <i class="fas fa-search"></i>
+                                                <span>Threat Analysis</span>
+                                            </div>
+                                            <div class="topic-card" onclick="quickQuery('Security best practices')">
+                                                <i class="fas fa-shield-alt"></i>
+                                                <span>Security Tips</span>
+                                            </div>
+                                            <div class="topic-card" onclick="quickQuery('Incident response')">
+                                                <i class="fas fa-exclamation-circle"></i>
+                                                <span>Incident Response</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message-time">Just now</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input">
+                            <div class="input-container">
+                                <div class="input-wrapper">
+                                    <input type="text" id="message-input" placeholder="Ask me anything about cybersecurity..." autocomplete="off">
+                                    <div class="input-effects">
+                                        <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                                            <div class="typing-dot"></div>
+                                            <div class="typing-dot"></div>
+                                            <div class="typing-dot"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="send-btn" onclick="sendMessage()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-capabilities">
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Advanced AI Analysis</h4>
+                        <p>Deep learning algorithms for threat detection and security analysis</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Real-time Protection</h4>
+                        <p>Continuous monitoring and instant threat response capabilities</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Knowledge Base</h4>
+                        <p>Access to millions of security scenarios and best practices</p>
+                    </div>
+                </div>
+                
+                <div class="ai-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                        <div class="stat-number" id="conversations-today">1,247</div>
+                        <div class="stat-label">Conversations Today</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="stat-number" id="threats-analyzed">89</div>
+                        <div class="stat-label">Threats Analyzed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-number">0.2s</div>
+                        <div class="stat-label">Avg Response Time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Control Panel -->
+        <section class="ai-control-panel">
+            <div class="control-header">
+                <h3><i class="fas fa-cogs"></i> AI Control Matrix</h3>
+            </div>
+            <div class="control-grid">
+                <button class="control-btn" onclick="toggleAIMode('analysis')">
+                    <i class="fas fa-search"></i>
+                    <span>Analysis Mode</span>
+                </button>
+                <button class="control-btn" onclick="toggleAIMode('creative')">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Creative Mode</span>
+                </button>
+                <button class="control-btn" onclick="toggleAIMode('security')">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Security Mode</span>
+                </button>
+                <button class="control-btn" onclick="runDiagnostics()">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Diagnostics</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Real-time AI Analytics -->
+        <section class="ai-analytics">
+            <div class="analytics-header">
+                <h3><i class="fas fa-chart-line"></i> Consciousness Analytics</h3>
+                <button class="refresh-btn" onclick="refreshAnalytics()">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <div class="card-data">
+                        <span class="data-value" id="neural-activity">94.7%</span>
+                        <span class="data-label">Neural Activity</span>
+                    </div>
+                    <div class="card-trend up"><i class="fas fa-arrow-up"></i> 2.3%</div>
+                </div>
+                <div class="analytics-card">
+                    <div class="card-icon"><i class="fas fa-memory"></i></div>
+                    <div class="card-data">
+                        <span class="data-value" id="memory-usage">67.2%</span>
+                        <span class="data-label">Memory Usage</span>
+                    </div>
+                    <div class="card-trend down"><i class="fas fa-arrow-down"></i> 1.8%</div>
+                </div>
+                <div class="analytics-card">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="card-data">
+                        <span class="data-value" id="processing-speed">847K</span>
+                        <span class="data-label">Ops/Second</span>
+                    </div>
+                    <div class="card-trend up"><i class="fas fa-arrow-up"></i> 12.5%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consciousness Status Grid -->
+        <section class="status-grid">
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Neural Networks Active</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Quantum Processing Online</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Memory Banks Synchronized</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Consciousness Level: Sentient</span>
+            </div>
+        </section>
+
+        <!-- AI Help Box -->
+        <div class="ai-help-box" id="ai-help-box">
+            <div class="help-toggle" onclick="toggleHelpBox()">
+                <i class="fas fa-robot"></i>
+                <span>AI Help</span>
+            </div>
+            <div class="help-content" id="help-content">
+                <div class="help-header">
+                    <div class="help-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="help-info">
+                        <h4>CyberBot Assistant</h4>
+                        <p>Quick cybersecurity help</p>
+                    </div>
+                    <button class="help-close" onclick="toggleHelpBox()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="help-chat" id="help-chat">
+                    <div class="help-message bot">
+                        <div class="help-msg-content">
+                            👋 Hi! Need quick help with cybersecurity? Ask me anything!
+                        </div>
+                    </div>
+                </div>
+                <div class="help-input-group">
+                    <input type="text" id="help-input" placeholder="Ask about security...">
+                    <button class="help-send" onclick="sendHelpMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mobile-responsive.js"></script>
+    <script src="script.js"></script>
+    <script src="cybershield-ai-assistant.js"></script>
+</body>
+</html>

@@ -1,0 +1,924 @@
+/* Enhanced Tutorial Styles */
+
+/* Tutorial Controls */
+.tutorial-controls {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+}
+
+.control-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.control-btn {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: relative;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #667eea);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+.progress-text {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    color: #00ffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Step Guidance */
+.step-guidance {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 350px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    z-index: 10000;
+    display: none;
+    backdrop-filter: blur(20px);
+}
+
+.guidance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.guidance-header h4 {
+    color: #00ffff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-guidance {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.close-guidance:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.guidance-content {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.guidance-content h5 {
+    color: #00ffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.step-counter {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
+}
+
+.guidance-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.guidance-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.guidance-btn:hover:not(:disabled) {
+    background: rgba(0, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.guidance-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Practice Sandbox */
+.practice-sandbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    z-index: 10000;
+    display: none;
+    backdrop-filter: blur(20px);
+}
+
+.sandbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.sandbox-header h3 {
+    color: #00ffff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-sandbox {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.close-sandbox:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sandbox-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sandbox-tab {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sandbox-tab.active {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.5);
+    color: #00ffff;
+}
+
+.sandbox-panel {
+    display: none;
+}
+
+.sandbox-panel.active {
+    display: block;
+}
+
+.sandbox-panel h4 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.sandbox-panel input,
+.sandbox-panel textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.sandbox-panel textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.sandbox-panel button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.sandbox-panel button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.practice-result {
+    margin-top: 1rem;
+}
+
+.practice-result-card {
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.error {
+    color: #ff4757;
+    padding: 0.5rem;
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    border-radius: 6px;
+}
+
+/* Tutorial Highlight */
+.tutorial-highlight {
+    position: relative;
+    z-index: 1000;
+}
+
+.tutorial-highlight::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px solid #00ffff;
+    border-radius: 15px;
+    animation: highlightPulse 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes highlightPulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7);
+        opacity: 1;
+    }
+    50% { 
+        box-shadow: 0 0 0 20px rgba(0, 255, 255, 0);
+        opacity: 0.8;
+    }
+}
+
+/* Completion Notification */
+.completion-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 255, 136, 0.9);
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    z-index: 10000;
+    animation: completionSlide 0.5s ease;
+}
+
+@keyframes completionSlide {
+    from { 
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+/* Interactive Demo Enhancements */
+.demo-simulation {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.demo-step {
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border-radius: 6px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.demo-step.active {
+    opacity: 1;
+    background: rgba(0, 255, 255, 0.1);
+    border-left: 3px solid #00ffff;
+}
+
+.demo-result {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    background: rgba(255, 165, 0, 0.1);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    color: #ffa500;
+}
+
+/* Test Cases Enhancement */
+.test-item {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.test-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.test-item.safe {
+    border-left: 3px solid #00ff88;
+}
+
+.test-item.warning {
+    border-left: 3px solid #ffa500;
+}
+
+.test-item.danger {
+    border-left: 3px solid #ff4757;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .step-guidance {
+        width: 90%;
+        right: 5%;
+    }
+    
+    .practice-sandbox {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .control-panel {
+        grid-template-columns: 1fr;
+    }
+    
+    .sandbox-tabs {
+        flex-direction: column;
+    }
+    
+    .guidance-actions {
+        flex-direction: column;
+    }
+}
+
+/* Enhanced AI Assistant Tutorial Styles */
+.ai-tutorial-advanced {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ai-capabilities {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.capability-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.capability-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+
+.capability-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ffff, #0080ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.chat-demo-container {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.demo-chat-interface {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.demo-chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.demo-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    max-width: 80%;
+}
+
+.demo-message.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.demo-message.ai {
+    align-self: flex-start;
+}
+
+.message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ffff, #0080ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.demo-message.user .message-avatar {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+}
+
+.message-content {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+}
+
+.demo-message.user .message-content {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: rgba(255, 107, 107, 0.2);
+}
+
+.demo-chat-input {
+    display: flex;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.demo-chat-input input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: #ffffff;
+    margin-right: 0.5rem;
+}
+
+.demo-chat-input input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.quick-topics {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.topic-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.topic-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.voice-tutorial {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.voice-commands-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.voice-command {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.command-trigger {
+    font-family: 'Courier New', monospace;
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.command-description {
+    color: #cccccc;
+}
+
+.try-voice-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.ai-walkthrough {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.walkthrough-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.walkthrough-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.walkthrough-step .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ffff, #0080ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-visual {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #00ffff;
+}
+
+.advanced-ai-features {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.features-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-showcase {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature-demo-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+}
+
+.ai-pro-tips {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.pro-tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.pro-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.tip-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ffff, #0080ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.tip-example {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 4px;
+    font-style: italic;
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+/* Demo Modal Styles */
+.demo-modal .modal-content {
+    background: rgba(26, 26, 46, 0.95);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.modal-header h3 {
+    color: #00ffff;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    color: #ffffff;
+}
+
+.analytics-demo .metric-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.analytics-demo .metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #cccccc;
+    margin-top: 0.25rem;
+}
+
+.chart-placeholder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 1rem;
+}
+
+.chart-bar {
+    width: 30px;
+    background: linear-gradient(to top, #00ffff, #0080ff);
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+}
+
+.memory-demo, .language-demo {
+    text-align: center;
+}
+
+.memory-item {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 4px;
+    text-align: left;
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.language-item {
+    padding: 0.75rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* AI Tutorial Responsive Design */
+@media (max-width: 768px) {
+    .capabilities-grid,
+    .topics-grid,
+    .features-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .walkthrough-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pro-tip {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .demo-message {
+        max-width: 95%;
+    }
+    
+    .voice-command {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}

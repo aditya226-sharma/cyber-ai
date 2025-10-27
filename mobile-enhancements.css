@@ -1,0 +1,380 @@
+/* Mobile Enhancements CSS */
+
+/* Viewport Height Fix */
+.quantum-hero,
+.mobile-nav {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Enhanced Mobile Navigation */
+.mobile-nav-toggle {
+    z-index: 1001;
+}
+
+.mobile-nav {
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Mobile-First Input Styling */
+@media (max-width: 768px) {
+    input, textarea, select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        border-radius: 12px;
+        -webkit-appearance: none;
+        -webkit-border-radius: 12px;
+    }
+    
+    /* Enhanced Touch Targets */
+    .tab-btn,
+    .scan-btn,
+    .quantum-btn,
+    .cta-btn {
+        min-height: 48px;
+        min-width: 48px;
+        touch-action: manipulation;
+    }
+    
+    /* Improved Scrolling */
+    .chat-container,
+    .help-chat,
+    .threat-feed {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Better Text Readability */
+    .hero h1,
+    .quantum-title {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Optimized Animations for Mobile */
+    .floating-shapes .shape {
+        animation-duration: 12s;
+    }
+    
+    .particles .particle {
+        animation-duration: 20s;
+    }
+    
+    /* Mobile-Optimized Cards */
+    .scanner-card,
+    .dashboard-card,
+    .feature-card {
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Enhanced Mobile Typography */
+    body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Mobile-Specific Spacing */
+    .container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+    
+    .header {
+        padding-top: max(15px, env(safe-area-inset-top));
+    }
+    
+    /* Improved Mobile Forms */
+    .input-container {
+        gap: 12px;
+    }
+    
+    .input-wrapper,
+    .textarea-wrapper {
+        position: relative;
+    }
+    
+    .input-wrapper input:focus,
+    .textarea-wrapper textarea:focus {
+        transform: scale(1.02);
+        transition: transform 0.2s ease;
+    }
+    
+    /* Mobile-Optimized Metrics */
+    .quantum-metrics {
+        padding: 0 10px;
+    }
+    
+    .metric-orb {
+        min-width: 120px;
+    }
+    
+    /* Enhanced Mobile Dashboard */
+    .world-map {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .threat-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Mobile AI Assistant */
+    .message-content {
+        border-radius: 18px;
+        max-width: 85%;
+    }
+    
+    .chat-input-group {
+        padding: 0 5px;
+    }
+    
+    /* Mobile Help Box */
+    .ai-help-box {
+        bottom: max(15px, env(safe-area-inset-bottom));
+        left: max(15px, env(safe-area-inset-left));
+        right: max(15px, env(safe-area-inset-right));
+    }
+    
+    /* Mobile Protocol Steps */
+    .protocol-step {
+        padding: 20px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Mobile Matrix Nodes */
+    .matrix-node {
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+    }
+    
+    /* Mobile Status Indicators */
+    .status-indicator {
+        border-radius: 10px;
+        padding: 12px;
+    }
+    
+    /* Mobile Notifications */
+    .notification {
+        border-radius: 12px;
+        margin: 10px;
+    }
+}
+
+/* Small Mobile Optimizations */
+@media (max-width: 480px) {
+    /* Ultra-compact spacing */
+    .container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+    }
+    
+    /* Compact cards */
+    .scanner-card,
+    .dashboard-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    /* Smaller touch targets for very small screens */
+    .control-btn,
+    .action-btn {
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    /* Compact metrics */
+    .metric-orb {
+        min-width: 100px;
+    }
+    
+    .orb-core {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Simplified animations for very small screens */
+    .floating-shapes .shape:nth-child(n+4) {
+        display: none;
+    }
+    
+    .particles .particle:nth-child(n+5) {
+        display: none;
+    }
+    
+    /* Ultra-optimized transforms */
+    .tab-btn:hover,
+    .scanner-card:hover {
+        transform: translate3d(0, -2px, 0) scale(1.005);
+    }
+    
+    .quantum-btn:hover {
+        transform: translate3d(0, -3px, 0) scale(1.01);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .quantum-hero {
+        min-height: 90vh;
+        padding: 1rem;
+    }
+    
+    .quantum-metrics {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .protocol-sequence {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 40px 20px;
+    }
+}
+
+/* High DPI Mobile Displays */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .scanner-icon,
+    .feature-icon,
+    .node-core i {
+        transform: translateZ(0);
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* iOS Specific Fixes */
+@supports (-webkit-touch-callout: none) {
+    .input-wrapper input,
+    .textarea-wrapper textarea {
+        -webkit-appearance: none;
+        border-radius: 12px;
+    }
+    
+    .scan-btn,
+    .quantum-btn {
+        -webkit-appearance: none;
+        border-radius: 20px;
+    }
+}
+
+/* Android Specific Fixes */
+@media (max-width: 768px) {
+    .scanner-card,
+    .dashboard-card {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+}
+
+/* Accessibility Improvements for Mobile */
+@media (max-width: 768px) {
+    /* Focus indicators */
+    .tab-btn:focus,
+    .scan-btn:focus,
+    .quantum-btn:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .scanner-card,
+        .dashboard-card {
+            border: 2px solid var(--text-primary);
+        }
+        
+        .quantum-btn,
+        .scan-btn {
+            border: 2px solid currentColor;
+        }
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .floating-shapes,
+        .particles,
+        .quantum-particles {
+            display: none;
+        }
+        
+        * {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* Enhanced Performance Optimizations for Mobile */
+@media (max-width: 768px) {
+    /* GPU acceleration for smooth animations */
+    .tab-btn,
+    .scanner-card,
+    .quantum-btn,
+    .matrix-node,
+    .dashboard-card,
+    .feature-card,
+    .protocol-step {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        will-change: transform;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Optimized hover effects for mobile */
+    .tab-btn:hover,
+    .scanner-card:hover,
+    .dashboard-card:hover {
+        transform: translate3d(0, -3px, 0) scale(1.01);
+    }
+    
+    .quantum-btn:hover,
+    .matrix-node:hover {
+        transform: translate3d(0, -5px, 0) scale(1.02);
+    }
+    
+    /* Enhanced active states */
+    .tab-btn:active,
+    .quantum-btn:active,
+    .scan-btn:active {
+        transform: translate3d(0, 0, 0) scale(0.95);
+        transition-duration: 0.1s;
+    }
+    
+    /* Optimize repaints */
+    .bg-animation {
+        contain: layout style paint;
+    }
+    
+    /* Reduce complexity for better performance */
+    .hero::before,
+    .quantum-hero::before {
+        display: none;
+    }
+    
+    /* Optimized animations for mobile */
+    .floating-shapes .shape {
+        animation-duration: 15s;
+        will-change: transform;
+    }
+    
+    .particles .particle {
+        animation-duration: 25s;
+        will-change: transform;
+    }
+    
+    /* Smooth scroll optimization */
+    .chat-container,
+    .help-chat,
+    .threat-feed {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        contain: layout style paint;
+    }
+}

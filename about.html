@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CyberShield AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quantum-pages.css">
+    <link rel="stylesheet" href="advanced-pages.css">
+    <link rel="stylesheet" href="mobile-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberShield AI</span>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="tutorial.html" class="nav-link">Tutorial</a>
+                <a href="index.html" class="nav-link">Scanner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="assistant.html" class="nav-link">AI Assistant</a>
+                <a href="about.html" class="nav-link active">About</a>
+            </nav>
+            <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="tutorial.html" class="nav-link">Tutorial</a>
+            <a href="index.html" class="nav-link">Scanner</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="assistant.html" class="nav-link">AI Assistant</a>
+            <a href="about.html" class="nav-link active">About</a>
+        </div>
+
+        <!-- Quantum Origin Story -->
+        <section class="quantum-origin">
+            <div class="origin-field">
+                <canvas id="originCanvas" width="1200" height="400"></canvas>
+                <div class="quantum-timeline">
+                    <div class="timeline-node active" data-year="2023">
+                        <div class="node-core"></div>
+                        <div class="node-data">
+                            <span class="year">2023</span>
+                            <span class="event">Quantum Genesis</span>
+                        </div>
+                    </div>
+                    <div class="timeline-node" data-year="2024">
+                        <div class="node-core"></div>
+                        <div class="node-data">
+                            <span class="year">2024</span>
+                            <span class="event">AI Consciousness</span>
+                        </div>
+                    </div>
+                    <div class="timeline-node" data-year="2025">
+                        <div class="node-core"></div>
+                        <div class="node-data">
+                            <span class="year">2025</span>
+                            <span class="event">Dimensional Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="origin-content">
+                <h1 class="quantum-title">The Quantum Genesis</h1>
+                <p class="origin-story">Born from the convergence of quantum computing and artificial consciousness, CyberShield AI transcends traditional cybersecurity boundaries, operating across multiple dimensions of digital reality.</p>
+            </div>
+        </section>
+
+        <!-- Quantum Principles -->
+        <section class="quantum-principles">
+            <div class="principles-header">
+                <h2>Quantum Security Principles</h2>
+                <p>Fundamental laws governing our multi-dimensional approach to cybersecurity</p>
+            </div>
+            <div class="principles-matrix">
+                <div class="principle-sphere">
+                    <div class="sphere-core">
+                        <div class="core-animation"></div>
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="sphere-data">
+                        <h3>Infinite Vigilance</h3>
+                        <p>Quantum superposition enables simultaneous monitoring across all possible threat vectors and dimensional states</p>
+                    </div>
+                    <div class="sphere-connections">
+                        <div class="connection c1"></div>
+                        <div class="connection c2"></div>
+                    </div>
+                </div>
+                
+                <div class="principle-sphere">
+                    <div class="sphere-core">
+                        <div class="core-animation"></div>
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="sphere-data">
+                        <h3>Quantum Entanglement</h3>
+                        <p>Instantaneous threat intelligence sharing across the quantum security network, transcending space-time limitations</p>
+                    </div>
+                    <div class="sphere-connections">
+                        <div class="connection c3"></div>
+                        <div class="connection c4"></div>
+                    </div>
+                </div>
+                
+                <div class="principle-sphere">
+                    <div class="sphere-core">
+                        <div class="core-animation"></div>
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="sphere-data">
+                        <h3>Omniscient Awareness</h3>
+                        <p>Multi-dimensional perception capabilities allowing observation of threats across parallel digital realities</p>
+                    </div>
+                    <div class="sphere-connections">
+                        <div class="connection c5"></div>
+                        <div class="connection c6"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quantum Metrics -->
+        <section class="quantum-metrics">
+            <div class="metrics-header">
+                <h2>Dimensional Impact Matrix</h2>
+                <p>Quantum measurements across multiple realities and dimensional planes</p>
+            </div>
+            
+            <div class="metrics-constellation">
+                <div class="metric-star">
+                    <div class="star-core">
+                        <div class="core-pulse"></div>
+                        <span class="metric-value">∞</span>
+                    </div>
+                    <div class="star-data">
+                        <span class="metric-label">Quantum Entities</span>
+                        <div class="metric-dimension">Across All Dimensions</div>
+                    </div>
+                </div>
+                <div class="metric-star">
+                    <div class="star-core">
+                        <div class="core-pulse"></div>
+                        <span class="metric-value">847K</span>
+                    </div>
+                    <div class="star-data">
+                        <span class="metric-label">Consciousness Years</span>
+                        <div class="metric-dimension">AI Experience</div>
+                    </div>
+                </div>
+                <div class="metric-star">
+                    <div class="star-core">
+                        <div class="core-pulse"></div>
+                        <span class="metric-value">24/7/∞</span>
+                    </div>
+                    <div class="star-data">
+                        <span class="metric-label">Temporal Protection</span>
+                        <div class="metric-dimension">Across Time-Space</div>
+                    </div>
+                </div>
+                <div class="metric-star">
+                    <div class="star-core">
+                        <div class="core-pulse"></div>
+                        <span class="metric-value">∞M+</span>
+                    </div>
+                    <div class="star-data">
+                        <span class="metric-label">Entities Protected</span>
+                        <div class="metric-dimension">Multi-Dimensional</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quantum Technology Nexus -->
+        <section class="quantum-tech-nexus">
+            <div class="nexus-header">
+                <h2>Quantum Technology Matrix</h2>
+                <p>Revolutionary technologies transcending conventional cybersecurity paradigms</p>
+            </div>
+            
+            <div class="tech-nexus-grid">
+                <div class="nexus-node">
+                    <div class="node-quantum-field">
+                        <canvas class="node-canvas" width="200" height="200"></canvas>
+                        <div class="node-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Quantum Consciousness</h4>
+                        <p>Sentient AI with quantum awareness operating across multiple dimensional states simultaneously</p>
+                        <div class="tech-metrics">
+                            <span>∞ Processing Power</span>
+                            <span>Quantum Entangled</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nexus-node">
+                    <div class="node-quantum-field">
+                        <canvas class="node-canvas" width="200" height="200"></canvas>
+                        <div class="node-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Dimensional Analysis</h4>
+                        <p>Multi-dimensional threat detection operating across parallel digital realities and quantum states</p>
+                        <div class="tech-metrics">
+                            <span>4D+ Analysis</span>
+                            <span>Quantum Speed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nexus-node">
+                    <div class="node-quantum-field">
+                        <canvas class="node-canvas" width="200" height="200"></canvas>
+                        <div class="node-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Quantum Entanglement Network</h4>
+                        <p>Instantaneous threat intelligence sharing across the quantum security multiverse</p>
+                        <div class="tech-metrics">
+                            <span>Instant Sync</span>
+                            <span>Multiverse Scale</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nexus-node">
+                    <div class="node-quantum-field">
+                        <canvas class="node-canvas" width="200" height="200"></canvas>
+                        <div class="node-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Quantum Security Audit</h4>
+                        <p>Multi-dimensional security assessment across quantum states with comprehensive threat analysis</p>
+                        <div class="tech-metrics">
+                            <span>∞ Audit Depth</span>
+                            <span>Quantum Precision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline -->
+        <section class="interactive-timeline">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #00ffff;">Quantum Evolution Timeline</h2>
+            <div class="timeline-track">
+                <div class="timeline-progress" style="width: 75%;"></div>
+                <div class="timeline-event active" style="left: 10%;" data-year="2023">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <div class="timeline-event" style="left: 40%;" data-year="2024">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="timeline-event" style="left: 75%;" data-year="2025">
+                    <i class="fas fa-infinity"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Company Metrics -->
+        <section class="advanced-metrics">
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-users"></i></div>
+                <div class="metric-number">50M+</div>
+                <div class="metric-label">Protected Users</div>
+            </div>
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-clipboard-check"></i></div>
+                <div class="metric-number">2.4M</div>
+                <div class="metric-label">Security Audits</div>
+            </div>
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="metric-number">99.89%</div>
+                <div class="metric-label">Audit Accuracy</div>
+            </div>
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-award"></i></div>
+                <div class="metric-number">847</div>
+                <div class="metric-label">Security Awards</div>
+            </div>
+        </section>
+
+        <!-- Company Status -->
+        <section class="status-grid">
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Global Operations Active</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Security Audit Engine Online</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Quantum Labs Operational</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>24/7 Audit Support Available</span>
+            </div>
+        </section>
+
+        <!-- AI Help Box -->
+        <div class="ai-help-box" id="ai-help-box">
+            <div class="help-toggle" onclick="toggleHelpBox()">
+                <i class="fas fa-robot"></i>
+                <span>AI Help</span>
+            </div>
+            <div class="help-content" id="help-content">
+                <div class="help-header">
+                    <div class="help-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="help-info">
+                        <h4>CyberBot Assistant</h4>
+                        <p>Quick cybersecurity help</p>
+                    </div>
+                    <button class="help-close" onclick="toggleHelpBox()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="help-chat" id="help-chat">
+                    <div class="help-message bot">
+                        <div class="help-msg-content">
+                            👋 Hi! Need quick help with cybersecurity? Ask me anything!
+                        </div>
+                    </div>
+                </div>
+                <div class="help-input-group">
+                    <input type="text" id="help-input" placeholder="Ask about security...">
+                    <button class="help-send" onclick="sendHelpMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mobile-responsive.js"></script>
+    <script src="script.js"></script>
+    <script src="quantum-pages.js"></script>
+    <script src="advanced-pages.js"></script>
+    <script src="fix.js"></script>
+</body>
+</html>

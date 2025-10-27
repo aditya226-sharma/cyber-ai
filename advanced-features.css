@@ -1,0 +1,470 @@
+/* Advanced Features Styles */
+
+/* Voice Commands */
+.voice-btn {
+    width: 40px;
+    height: 40px;
+    margin-left: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voice-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00ff88;
+    border-radius: 50%;
+    animation: pulseRing 2s ease-out infinite;
+}
+
+@keyframes pulseRing {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+/* File Drop Zone */
+.file-drop-zone {
+    margin: 2rem 0;
+    padding: 3rem;
+    border: 2px dashed rgba(102, 126, 234, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-drop-zone.drag-over {
+    border-color: #00ff88;
+    background: rgba(0, 255, 136, 0.05);
+    transform: scale(1.02);
+}
+
+.drop-content i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.upload-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+}
+
+#file-input {
+    display: none;
+}
+
+.file-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 12px;
+    border-left: 4px solid;
+}
+
+.file-result.clean {
+    border-left-color: #00ff88;
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.file-result.threat {
+    border-left-color: #ff4757;
+    background: rgba(255, 71, 87, 0.05);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file-size {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Network Monitor */
+#network-monitor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.network-stat {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.network-stat .stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ff88;
+    margin-bottom: 0.5rem;
+}
+
+.network-stat .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Threat Alerts */
+.threat-alert {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 350px;
+    padding: 1.5rem;
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.threat-alert {
+    display: flex;
+    gap: 1rem;
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    color: #ff4757;
+}
+
+.alert-content h4 {
+    margin-bottom: 0.5rem;
+    color: #ff4757;
+}
+
+.alert-time {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.alert-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+/* Password Generator */
+.password-generator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(20px);
+    z-index: 10000;
+    display: none;
+}
+
+.generator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.generator-options {
+    margin-bottom: 1.5rem;
+}
+
+.generator-options label {
+    display: block;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.length-control {
+    margin-top: 1rem;
+}
+
+.length-control input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.generated-password {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.generated-password input {
+    flex: 1;
+    padding: 0.75rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+}
+
+.copy-btn {
+    padding: 0.75rem;
+    width: auto;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.password-strength {
+    text-align: center;
+}
+
+.strength-meter {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.strength-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: #ff4757;
+}
+
+.strength-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Vulnerability Scanner */
+.vuln-scanner {
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.scan-options {
+    margin: 1.5rem 0;
+}
+
+.scan-options label {
+    display: block;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.vuln-scan-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.vuln-results {
+    min-height: 100px;
+}
+
+.vuln-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.vuln-item.low {
+    border-left-color: #ffa500;
+    background: rgba(255, 165, 0, 0.05);
+}
+
+.vuln-item.medium {
+    border-left-color: #ff6b35;
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.vuln-item.high {
+    border-left-color: #ff4757;
+    background: rgba(255, 71, 87, 0.05);
+}
+
+.vuln-severity {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.vuln-item.low .vuln-severity {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+}
+
+.vuln-item.medium .vuln-severity {
+    background: rgba(255, 107, 53, 0.2);
+    color: #ff6b35;
+}
+
+.vuln-item.high .vuln-severity {
+    background: rgba(255, 71, 87, 0.2);
+    color: #ff4757;
+}
+
+/* Security Audit */
+.security-audit {
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.audit-score {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.score-circle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #00ff88;
+    border-radius: 50%;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.score-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.audit-items {
+    margin: 2rem 0;
+}
+
+.audit-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.audit-item.passed i {
+    color: #00ff88;
+}
+
+.audit-item.warning i {
+    color: #ffa500;
+}
+
+.audit-item.failed i {
+    color: #ff4757;
+}
+
+.audit-btn {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    animation: slideInUp 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.notification i {
+    color: #00ff88;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .password-generator {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .threat-alert {
+        width: 90%;
+        right: 5%;
+    }
+    
+    #network-monitor {
+        grid-template-columns: 1fr;
+    }
+    
+    .file-drop-zone {
+        padding: 2rem 1rem;
+    }
+}

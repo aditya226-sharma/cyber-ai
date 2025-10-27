@@ -1,0 +1,3068 @@
+/* Advanced Dashboard Styles */
+
+/* Dashboard Hero */
+.dashboard-hero {
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.dashboard-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+/* Control Panel */
+.control-panel {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.panel-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.control-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.control-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.control-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.control-toggle {
+    width: 50px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.control-toggle.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.control-toggle.active::after {
+    transform: translateX(25px);
+}
+
+/* Advanced Threat Map */
+.threat-map-advanced {
+    position: relative;
+}
+
+.world-map-container {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.world-map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+}
+
+.threat-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: threatPulse 2s infinite;
+}
+
+.threat-dot.high {
+    background: #ff4757;
+    box-shadow: 0 0 20px #ff4757;
+}
+
+.threat-dot.medium {
+    background: #ffa500;
+    box-shadow: 0 0 15px #ffa500;
+}
+
+.threat-dot.low {
+    background: #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.threat-pulse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #667eea;
+    border-radius: 50%;
+    animation: quantumRipple 3s infinite;
+}
+
+@keyframes threatPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.7; }
+}
+
+.threat-legend-advanced {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.legend-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: neonPulse 2s infinite;
+}
+
+.legend-dot.high {
+    background: #ff4757;
+    box-shadow: 0 0 10px #ff4757;
+}
+
+.legend-dot.medium {
+    background: #ffa500;
+    box-shadow: 0 0 10px #ffa500;
+}
+
+.legend-dot.low {
+    background: #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.count {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Advanced Analytics */
+.analytics-grid-advanced {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.metric-card-advanced {
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-card-advanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.metric-card-advanced:hover::before {
+    transform: scaleX(1);
+}
+
+.metric-card-advanced .metric-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.metric-card-advanced .metric-icon.danger {
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.2), rgba(255, 107, 53, 0.2));
+    border-color: rgba(255, 71, 87, 0.3);
+}
+
+.metric-card-advanced .metric-icon.warning {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 193, 7, 0.2));
+    border-color: rgba(255, 165, 0, 0.3);
+}
+
+.metric-card-advanced .metric-icon.success {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(76, 175, 80, 0.2));
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.metric-trend {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.metric-trend.up {
+    color: #00ff88;
+}
+
+.metric-trend.down {
+    color: #ff4757;
+}
+
+.metric-graph {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+    height: 40px;
+    margin-top: 1rem;
+}
+
+.graph-bar {
+    flex: 1;
+    background: linear-gradient(to top, rgba(102, 126, 234, 0.3), rgba(102, 126, 234, 0.8));
+    border-radius: 2px;
+    min-height: 10%;
+    animation: graphGrow 1s ease-out;
+}
+
+@keyframes graphGrow {
+    from { height: 0; }
+    to { height: var(--height, 50%); }
+}
+
+/* Animate Counter */
+.animate-counter {
+    animation: counterGlow 2s ease-in-out infinite;
+}
+
+@keyframes counterGlow {
+    0%, 100% { text-shadow: 0 0 5px currentColor; }
+    50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+/* Enhanced Dashboard Cards */
+.dashboard-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.dashboard-card:hover::after {
+    left: 100%;
+}
+
+/* Live Threat Feed Enhancements */
+.threat-feed {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.threat-item {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.threat-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.threat-item .threat-content i.danger {
+    color: #ff4757;
+}
+
+.threat-item .threat-content i.warning {
+    color: #ffa500;
+}
+
+.threat-item .threat-content i.success {
+    color: #00ff88;
+}
+
+/* System Status Enhancements */
+.status-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.status-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.status-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.status-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #00ff88);
+    border-radius: 3px;
+    transition: width 1s ease-out;
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .control-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .analytics-grid-advanced {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .panel-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .panel-actions {
+        justify-content: center;
+    }
+    
+    .control-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .legend-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+/* Quick Actions Panel */
+.quick-actions {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.quick-actions h3 {
+    margin-bottom: 1.5rem;
+    color: #00ffff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+}
+
+.action-btn i {
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+.action-btn span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Stat Trends */
+.stat-trend {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.stat-trend.success {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.stat-trend.danger {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Card Refresh Buttons */
+.map-refresh, .feed-filter, .status-refresh {
+    padding: 0.5rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-refresh:hover, .feed-filter:hover, .status-refresh:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Security Insights */
+.insights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.insight-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.insight-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 255, 255, 0.2);
+}
+
+.insight-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.insight-icon.warning {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+}
+
+.insight-icon.success {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.insight-icon.info {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+.insight-content h5 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.insight-content p {
+    margin: 0 0 1rem 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.insight-action {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.insight-action:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+.insight-badge {
+    padding: 0.25rem 0.75rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #00ffff;
+}
+/* Enhanced Quantum Threat Map */
+.quantum-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: gridPulse 4s ease-in-out infinite;
+}
+
+.scan-beam {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+    animation: scanSweep 6s linear infinite;
+}
+
+.threat-node {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.threat-node.critical {
+    background: #ff1744;
+    box-shadow: 0 0 20px #ff1744;
+}
+
+.threat-node.high {
+    background: #ff9800;
+    box-shadow: 0 0 15px #ff9800;
+}
+
+.threat-node.medium {
+    background: #ffc107;
+    box-shadow: 0 0 10px #ffc107;
+}
+
+.threat-node.low {
+    background: #4caf50;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+.node-pulse {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    animation: nodePulse 2s infinite;
+    opacity: 0.6;
+}
+
+.node-info {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.threat-node:hover .node-info {
+    opacity: 1;
+}
+
+.connection-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.5), transparent);
+    animation: dataFlow 3s linear infinite;
+}
+
+.threat-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.threat-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.threat-stat .stat-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.threat-stat.critical .stat-icon {
+    background: rgba(255, 23, 68, 0.2);
+    color: #ff1744;
+}
+
+.threat-stat.high .stat-icon {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+}
+
+.threat-stat.medium .stat-icon {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.threat-stat.low .stat-icon {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+}
+
+/* Enhanced AI Analytics */
+.ai-analytics-container {
+    padding: 1rem;
+}
+
+.analytics-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.ai-brain-visual {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.brain-core {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #00ffff, #0080ff);
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: brainPulse 2s ease-in-out infinite;
+}
+
+.neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.neuron {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #00ffff;
+    border-radius: 50%;
+    animation: neuronFire 3s ease-in-out infinite;
+}
+
+.neuron:nth-child(1) { top: 5px; left: 30px; animation-delay: 0s; }
+.neuron:nth-child(2) { top: 25px; left: 5px; animation-delay: 0.5s; }
+.neuron:nth-child(3) { top: 45px; left: 35px; animation-delay: 1s; }
+.neuron:nth-child(4) { top: 30px; left: 50px; animation-delay: 1.5s; }
+
+.ai-status {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.ai-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ai-state {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.threat-analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.analysis-metric {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+    font-weight: 600;
+}
+
+.circular-progress {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 1rem auto;
+}
+
+.progress-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#00ffff 0deg, #00ffff var(--progress, 0deg), rgba(255, 255, 255, 0.1) var(--progress, 0deg));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--bg-primary);
+    border-radius: 50%;
+}
+
+.progress-text {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #00ffff;
+    z-index: 1;
+}
+
+.metric-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.detail-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Enhanced Live Threat Feed */
+.live-feed-container {
+    padding: 1rem;
+}
+
+.feed-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.feed-tabs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.feed-tab {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feed-tab.active {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: rgba(0, 255, 255, 0.3);
+    color: #00ffff;
+}
+
+.feed-speed {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.speed-selector {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+}
+
+.threat-feed-advanced {
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.threat-alert {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+    animation: alertSlide 0.5s ease-out;
+}
+
+.threat-alert.critical {
+    border-left-color: #ff1744;
+    background: rgba(255, 23, 68, 0.05);
+}
+
+.threat-alert.high {
+    border-left-color: #ff9800;
+    background: rgba(255, 152, 0, 0.05);
+}
+
+.threat-alert.medium {
+    border-left-color: #ffc107;
+    background: rgba(255, 193, 7, 0.05);
+}
+
+.threat-alert.low {
+    border-left-color: #4caf50;
+    background: rgba(76, 175, 80, 0.05);
+}
+
+.alert-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: alertPulse 2s infinite;
+}
+
+.threat-alert.critical .alert-indicator {
+    background: #ff1744;
+    box-shadow: 0 0 10px #ff1744;
+}
+
+.threat-alert.high .alert-indicator {
+    background: #ff9800;
+    box-shadow: 0 0 8px #ff9800;
+}
+
+.threat-alert.medium .alert-indicator {
+    background: #ffc107;
+    box-shadow: 0 0 6px #ffc107;
+}
+
+.threat-alert.low .alert-indicator {
+    background: #4caf50;
+    box-shadow: 0 0 4px #4caf50;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.alert-type {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.alert-time {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.alert-message {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.alert-location {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.alert-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.action-btn-small {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn-small:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes gridPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes scanSweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes nodePulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.5); opacity: 0.3; }
+}
+
+@keyframes dataFlow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes brainPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes neuronFire {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes alertSlide {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes alertPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+/* Advanced Quantum Threat Map */
+.quantum-map-advanced {
+    padding: 1rem;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.map-mode {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-mode.active {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+.holographic-map {
+    position: relative;
+    height: 350px;
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.quantum-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+    animation: quantumShift 8s ease-in-out infinite;
+}
+
+#threatCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.threat-clusters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cluster {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.cluster-core {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: coreRotate 4s linear infinite;
+}
+
+.cluster.critical .cluster-core {
+    background: radial-gradient(circle, #ff1744, #ff4569);
+    box-shadow: 0 0 30px #ff1744;
+}
+
+.cluster.high .cluster-core {
+    background: radial-gradient(circle, #ff9800, #ffb74d);
+    box-shadow: 0 0 25px #ff9800;
+}
+
+.cluster.medium .cluster-core {
+    background: radial-gradient(circle, #ffc107, #ffeb3b);
+    box-shadow: 0 0 20px #ffc107;
+}
+
+.cluster-ring {
+    width: 60px;
+    height: 60px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ringPulse 3s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.cluster-label {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* AI Command Center */
+.ai-command-center {
+    padding: 1rem;
+}
+
+.ai-core-display {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.quantum-processor {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.processor-core {
+    width: 60px;
+    height: 60px;
+    background: conic-gradient(from 0deg, #00ffff, #0080ff, #8000ff, #ff0080, #00ffff);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: processorSpin 6s linear infinite;
+}
+
+.data-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.flow-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ffff;
+    border-radius: 50%;
+    animation: particleOrbit 4s linear infinite;
+}
+
+.flow-particle:nth-child(1) {
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+
+.flow-particle:nth-child(2) {
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
+.flow-particle:nth-child(3) {
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+
+.ai-metrics {
+    flex: 1;
+}
+
+.metric-display {
+    margin-bottom: 1rem;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+}
+
+.metric-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    border-radius: 4px;
+    animation: barGlow 2s ease-in-out infinite;
+}
+
+.metric-value {
+    font-size: 0.8rem;
+    color: #00ffff;
+    font-weight: 600;
+}
+
+.threat-matrix {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.matrix-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.matrix-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.matrix-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.matrix-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.matrix-cell {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.matrix-cell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cell-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    animation: cellPulse 2s infinite;
+}
+
+.matrix-cell.critical .cell-indicator {
+    background: #ff1744;
+    box-shadow: 0 0 10px #ff1744;
+}
+
+.matrix-cell.high .cell-indicator {
+    background: #ff9800;
+    box-shadow: 0 0 8px #ff9800;
+}
+
+.matrix-cell.medium .cell-indicator {
+    background: #ffc107;
+    box-shadow: 0 0 6px #ffc107;
+}
+
+.matrix-cell.low .cell-indicator {
+    background: #4caf50;
+    box-shadow: 0 0 4px #4caf50;
+}
+
+.cell-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.cell-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ffff;
+}
+
+/* Quantum Feed System */
+.quantum-feed-system {
+    padding: 1rem;
+}
+
+.feed-command-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 8px;
+    gap: 1rem;
+}
+
+.command-input {
+    display: flex;
+    flex: 1;
+    max-width: 300px;
+}
+
+.threat-search {
+    flex: 1;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px 0 0 6px;
+    color: #fff;
+}
+
+.search-btn {
+    padding: 0.5rem;
+    background: rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 0 6px 6px 0;
+    color: #00ffff;
+    cursor: pointer;
+}
+
+.feed-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-chip {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-chip.active {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+.feed-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-chip {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #00ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.threat-timeline {
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: markerPulse 2s infinite;
+}
+
+.timeline-item.critical .timeline-marker {
+    background: #ff1744;
+    box-shadow: 0 0 10px #ff1744;
+}
+
+.timeline-item.high .timeline-marker {
+    background: #ff9800;
+    box-shadow: 0 0 8px #ff9800;
+}
+
+.timeline-item.medium .timeline-marker {
+    background: #ffc107;
+    box-shadow: 0 0 6px #ffc107;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.threat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.threat-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.threat-badge.critical {
+    background: rgba(255, 23, 68, 0.2);
+    color: #ff1744;
+    border: 1px solid #ff1744;
+}
+
+.threat-badge.high {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 1px solid #ff9800;
+}
+
+.threat-badge.medium {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+.threat-id {
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.threat-timestamp {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+.threat-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.threat-details {
+    margin-bottom: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.detail-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+.threat-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn.primary {
+    background: rgba(255, 23, 68, 0.2);
+    border: 1px solid #ff1744;
+    color: #ff1744;
+}
+
+.action-btn.secondary {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    color: #00ffff;
+}
+
+.action-btn.tertiary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Animations */
+@keyframes quantumShift {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+}
+
+@keyframes coreRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes ringPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+}
+
+@keyframes processorSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes particleOrbit {
+    from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+@keyframes barGlow {
+    0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); }
+}
+
+@keyframes cellPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+@keyframes markerPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+/* Neural Analytics Hub */
+.neural-analytics-hub {
+    padding: 1rem;
+}
+
+.ai-brain-interface {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.brain-visualization {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+#brainCanvas {
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+}
+
+.synaptic-activity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.synapse {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: synapsefire 3s infinite;
+}
+
+.synapse.active {
+    top: 30%;
+    left: 20%;
+    background: #00ffff;
+    animation-delay: 0s;
+}
+
+.synapse.processing {
+    top: 60%;
+    left: 70%;
+    background: #ff00ff;
+    animation-delay: 1s;
+}
+
+.synapse.idle {
+    top: 80%;
+    left: 40%;
+    background: #ffff00;
+    animation-delay: 2s;
+}
+
+.cognitive-metrics {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cognitive-stat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+}
+
+.cognitive-stat .stat-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00ffff, #0080ff);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-title {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    display: block;
+    color: #00ffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-progress {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-wave {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0080ff, #00ffff);
+    border-radius: 3px;
+    animation: waveFlow 2s ease-in-out infinite;
+}
+
+.threat-prediction-engine {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prediction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.prediction-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.time-range {
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #fff;
+}
+
+.recalculate-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #00ffff;
+    cursor: pointer;
+}
+
+.prediction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.prediction-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border-left: 4px solid;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.prediction-card.critical {
+    border-left-color: #ff1744;
+    background: rgba(255, 23, 68, 0.05);
+}
+
+.prediction-card.high {
+    border-left-color: #ff9800;
+    background: rgba(255, 152, 0, 0.05);
+}
+
+.prediction-card.medium {
+    border-left-color: #ffc107;
+    background: rgba(255, 193, 7, 0.05);
+}
+
+.prediction-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.prediction-card.critical .prediction-icon {
+    background: rgba(255, 23, 68, 0.2);
+    color: #ff1744;
+}
+
+.prediction-card.high .prediction-icon {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+}
+
+.prediction-card.medium .prediction-icon {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.prediction-data {
+    flex: 1;
+}
+
+.prediction-type {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.prediction-probability {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.prediction-timeline span {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.timeline-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    border-radius: 3px;
+    animation: timelineProgress 3s ease-in-out infinite;
+}
+
+/* Holographic Threat Stream */
+.holographic-threat-stream {
+    padding: 1rem;
+}
+
+.stream-interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.control-cluster {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.holo-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.holo-btn.active {
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.threat-velocity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.velocity-meter {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+}
+
+.velocity-needle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 25px;
+    background: #00ffff;
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+
+.velocity-value {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #00ffff;
+}
+
+.stream-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    animation: bubblePulse 3s ease-in-out infinite;
+}
+
+.stat-bubble.critical {
+    background: radial-gradient(circle, rgba(255, 23, 68, 0.3), rgba(255, 23, 68, 0.1));
+    border: 2px solid #ff1744;
+}
+
+.stat-bubble.high {
+    background: radial-gradient(circle, rgba(255, 152, 0, 0.3), rgba(255, 152, 0, 0.1));
+    border: 2px solid #ff9800;
+}
+
+.stat-bubble.medium {
+    background: radial-gradient(circle, rgba(255, 193, 7, 0.3), rgba(255, 193, 7, 0.1));
+    border: 2px solid #ffc107;
+}
+
+.stat-bubble.low {
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.1));
+    border: 2px solid #4caf50;
+}
+
+.bubble-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.bubble-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.holographic-display {
+    position: relative;
+    height: 300px;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1), transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.1), transparent 50%);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.threat-particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    animation: particleFloat 6s ease-in-out infinite;
+}
+
+.particle-core {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: coreRotate 4s linear infinite;
+}
+
+.threat-particle.critical .particle-core {
+    background: radial-gradient(circle, #ff1744, #ff4569);
+    box-shadow: 0 0 20px #ff1744;
+}
+
+.threat-particle.high .particle-core {
+    background: radial-gradient(circle, #ff9800, #ffb74d);
+    box-shadow: 0 0 15px #ff9800;
+}
+
+.threat-particle.medium .particle-core {
+    background: radial-gradient(circle, #ffc107, #ffeb3b);
+    box-shadow: 0 0 10px #ffc107;
+}
+
+.particle-trail {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, currentColor);
+    animation: trailFlow 2s linear infinite;
+}
+
+.particle-info {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.threat-particle:hover .particle-info {
+    opacity: 1;
+}
+
+.info-title {
+    display: block;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.info-source {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+}
+
+.data-stream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.stream-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.5), transparent);
+    animation: streamFlow 4s linear infinite;
+}
+
+.threat-analyzer {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.analyzer-panel h5 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.analysis-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-label {
+    min-width: 150px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill.scanning {
+    background: linear-gradient(90deg, #ff9800, #ffc107);
+    animation: scanningPulse 2s ease-in-out infinite;
+}
+
+.progress-fill.processing {
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    animation: processingPulse 1.5s ease-in-out infinite;
+}
+
+.progress-fill.complete {
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+}
+
+.progress-percent {
+    min-width: 40px;
+    text-align: right;
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes synapsefire {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes waveFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes timelineProgress {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+@keyframes bubblePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes trailFlow {
+    0% { opacity: 0; transform: translateX(-10px); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(10px); }
+}
+
+@keyframes streamFlow {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes scanningPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+@keyframes processingPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+/* Quantum Threat Nexus */
+.quantum-nexus {
+    padding: 1rem;
+}
+
+.dimensional-interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    border-radius: 12px;
+}
+
+.dimension-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dim-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dim-btn.active {
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.threat-intensity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.intensity-orb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.orb-core {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #ff1744, #ff4569);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbPulse 2s ease-in-out infinite;
+}
+
+.orb-rings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ring {
+    position: absolute;
+    border: 2px solid rgba(255, 23, 68, 0.3);
+    border-radius: 50%;
+    animation: ringExpand 3s ease-in-out infinite;
+}
+
+.ring-1 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.ring-2 {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    left: 10px;
+    animation-delay: 1s;
+}
+
+.ring-3 {
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0;
+    animation-delay: 2s;
+}
+
+.holographic-space {
+    position: relative;
+    height: 350px;
+    background: 
+        radial-gradient(ellipse at 30% 20%, rgba(0, 255, 255, 0.15), transparent 60%),
+        radial-gradient(ellipse at 70% 80%, rgba(255, 0, 255, 0.15), transparent 60%);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+#quantumCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.threat-vortex {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.vortex-core {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: vortexSpin 4s linear infinite;
+}
+
+.threat-vortex.critical .vortex-core {
+    background: conic-gradient(from 0deg, #ff1744, #ff4569, #ff1744);
+    box-shadow: 0 0 30px #ff1744;
+}
+
+.threat-vortex.high .vortex-core {
+    background: conic-gradient(from 0deg, #ff9800, #ffb74d, #ff9800);
+    box-shadow: 0 0 25px #ff9800;
+}
+
+.vortex-spiral {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spiralRotate 2s linear infinite;
+}
+
+.vortex-data {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.threat-vortex:hover .vortex-data {
+    opacity: 1;
+}
+
+.quantum-bridge {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(255, 0, 255, 0.8));
+    animation: bridgeFlow 3s ease-in-out infinite;
+}
+
+.constellation-node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #00ffff;
+    border-radius: 50%;
+    animation: nodeFlicker 2s ease-in-out infinite;
+}
+
+.nexus-analytics {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.analytics-pod {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pod-metric {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.metric-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #00ffff;
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Quantum AI Consciousness */
+.quantum-consciousness {
+    padding: 1rem;
+}
+
+.consciousness-core {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+    border-radius: 16px;
+}
+
+.quantum-brain {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+#consciousnessCanvas {
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+}
+
+.thought-streams {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.thought-stream {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(180deg, #00ffff, transparent);
+    animation: thoughtFlow 4s ease-in-out infinite;
+}
+
+.stream-1 {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.stream-2 {
+    top: 60%;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.stream-3 {
+    top: 80%;
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.neural-clusters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cluster {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: clusterPulse 3s ease-in-out infinite;
+}
+
+.cluster-logic {
+    top: 25%;
+    left: 25%;
+    background: radial-gradient(circle, #00ffff, #0080ff);
+    animation-delay: 0s;
+}
+
+.cluster-pattern {
+    top: 25%;
+    right: 25%;
+    background: radial-gradient(circle, #ff00ff, #8000ff);
+    animation-delay: 1s;
+}
+
+.cluster-prediction {
+    bottom: 25%;
+    left: 50%;
+    background: radial-gradient(circle, #ffff00, #ff8000);
+    animation-delay: 2s;
+}
+
+.consciousness-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.metric-sphere {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sphere-core {
+    width: 80px;
+    height: 80px;
+    background: conic-gradient(from 0deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+    border-radius: 50%;
+    animation: sphereRotate 6s linear infinite;
+}
+
+.sphere-data {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+.data-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.data-label {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.quantum-analysis {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.analysis-matrix {
+    text-align: center;
+}
+
+.matrix-title {
+    color: #00ffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.probability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.prob-cell {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.prob-cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cell-quantum-state {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: quantumFlicker 2s ease-in-out infinite;
+}
+
+.prob-cell.critical .cell-quantum-state {
+    background: #ff1744;
+    box-shadow: 0 0 10px #ff1744;
+}
+
+.prob-cell.high .cell-quantum-state {
+    background: #ff9800;
+    box-shadow: 0 0 8px #ff9800;
+}
+
+.prob-cell.medium .cell-quantum-state {
+    background: #ffc107;
+    box-shadow: 0 0 6px #ffc107;
+}
+
+.prob-cell.low .cell-quantum-state {
+    background: #4caf50;
+    box-shadow: 0 0 4px #4caf50;
+}
+
+.cell-type {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.cell-prob {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ffff;
+}
+
+/* Quantum Threat Resonance */
+.quantum-resonance {
+    padding: 1rem;
+}
+
+.resonance-chamber {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.chamber-core {
+    flex: 2;
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#resonanceCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.frequency-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    animation: waveMotion 3s ease-in-out infinite;
+}
+
+.critical-wave {
+    top: 30%;
+    background: linear-gradient(90deg, transparent, #ff1744, transparent);
+    animation-delay: 0s;
+}
+
+.high-wave {
+    top: 50%;
+    background: linear-gradient(90deg, transparent, #ff9800, transparent);
+    animation-delay: 1s;
+}
+
+.medium-wave {
+    top: 70%;
+    background: linear-gradient(90deg, transparent, #ffc107, transparent);
+    animation-delay: 2s;
+}
+
+.quantum-signatures {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.signature {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sig-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.sig-2 {
+    top: 60%;
+    left: 60%;
+}
+
+.sig-3 {
+    top: 80%;
+    left: 40%;
+}
+
+.sig-pulse {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    animation: sigPulse 2s ease-in-out infinite;
+}
+
+.sig-label {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: #00ffff;
+    white-space: nowrap;
+}
+
+.resonance-spectrum {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spectrum-analyzer {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.spectrum-bar {
+    flex: 1;
+    background: linear-gradient(to top, #00ffff, #ff00ff);
+    border-radius: 2px;
+    min-height: 10%;
+    animation: spectrumPulse 2s ease-in-out infinite;
+}
+
+.spectrum-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.threat-dimensional-view {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.dimensional-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.grid-cell {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.grid-cell:hover {
+    transform: scale(1.05);
+}
+
+.cell-core {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    animation: cellRotate 4s linear infinite;
+}
+
+.grid-cell.active .cell-core {
+    background: conic-gradient(from 0deg, #00ffff, #0080ff, #00ffff);
+}
+
+.grid-cell.processing .cell-core {
+    background: conic-gradient(from 0deg, #ff9800, #ffb74d, #ff9800);
+}
+
+.grid-cell.scanning .cell-core {
+    background: conic-gradient(from 0deg, #ffc107, #ffeb3b, #ffc107);
+}
+
+.grid-cell.quantum .cell-core {
+    background: conic-gradient(from 0deg, #ff00ff, #8000ff, #ff00ff);
+}
+
+.cell-coord {
+    font-size: 0.9rem;
+    color: #00ffff;
+    font-family: monospace;
+}
+
+/* Advanced Animations */
+@keyframes orbPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+@keyframes ringExpand {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes vortexSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes spiralRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bridgeFlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes nodeFlicker {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+@keyframes thoughtFlow {
+    0%, 100% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-20px); }
+}
+
+@keyframes clusterPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+}
+
+@keyframes sphereRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes quantumFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes waveMotion {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+@keyframes sigPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.5); opacity: 0.4; }
+}
+
+@keyframes spectrumPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+@keyframes cellRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

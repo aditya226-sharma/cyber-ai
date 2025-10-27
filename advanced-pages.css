@@ -1,0 +1,1679 @@
+/* Advanced Features for Home, Assistant, and About Pages */
+
+/* Voice Command Interface */
+.voice-command-panel {
+    position: fixed;
+    top: 50%;
+    right: -300px;
+    transform: translateY(-50%);
+    width: 280px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.voice-command-panel.active {
+    right: 20px;
+}
+
+.voice-toggle {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.voice-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.voice-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.voice-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff4757;
+    animation: pulse 2s infinite;
+}
+
+.voice-indicator.listening {
+    background: #00ff88;
+}
+
+.voice-commands {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Real-time Analytics Overlay */
+.analytics-overlay {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.analytics-overlay.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.analytics-metric {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.metric-value {
+    color: #00ffff;
+    font-weight: 600;
+}
+
+/* Interactive Hologram Cards */
+.hologram-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hologram-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.hologram-card:hover::before {
+    opacity: 1;
+    animation: hologramScan 2s linear infinite;
+}
+
+.hologram-card:hover {
+    transform: translate3d(0, -5px, 0) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.5);
+}
+
+@keyframes hologramScan {
+    0% { transform: translate3d(-100%, -100%, 0) rotate(45deg); }
+    100% { transform: translate3d(100%, 100%, 0) rotate(45deg); }
+}
+
+/* Advanced Particle System */
+.particle-system {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.advanced-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ffff;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: particleFloat 8s linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translate3d(0, 100vh, 0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate3d(100px, -100px, 0);
+        opacity: 0;
+    }
+}
+
+/* Quantum Scanner Widget */
+.quantum-scanner-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 999;
+}
+
+.scanner-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.scanner-radar {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #00ffff;
+    border-radius: 50%;
+    position: relative;
+    animation: radarSpin 2s linear infinite;
+}
+
+.scanner-radar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 50%;
+    background: #00ffff;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%) rotate(0deg);
+    animation: radarSweep 2s linear infinite;
+}
+
+@keyframes radarSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes radarSweep {
+    0% { transform: translate3d(-50%, -100%, 0) rotate(0deg); }
+    100% { transform: translate3d(-50%, -100%, 0) rotate(360deg); }
+}
+
+.scanner-status {
+    font-size: 0.8rem;
+    color: #00ffff;
+}
+
+/* Interactive Timeline */
+.interactive-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-track {
+    position: relative;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin: 2rem 0;
+}
+
+.timeline-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #00ffff);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 2s ease;
+}
+
+.timeline-event {
+    position: absolute;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 255, 255, 0.2);
+    border: 2px solid #00ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeline-event:hover {
+    transform: translate3d(0, 0, 0) scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.timeline-event.active {
+    background: rgba(0, 255, 255, 0.5);
+    animation: eventPulse 2s ease-in-out infinite;
+}
+
+@keyframes eventPulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7);
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 0 20px rgba(0, 255, 255, 0);
+        transform: translate3d(0, 0, 0) scale(1.1);
+    }
+}
+
+/* Advanced Metrics Display */
+.advanced-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.metric-pod {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-pod::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    animation: metricScan 3s ease-in-out infinite;
+}
+
+@keyframes metricScan {
+    0% { transform: translate3d(-100%, 0, 0); }
+    50% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.metric-icon {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.metric-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Quantum Field Effects */
+.quantum-field-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    animation: quantumShift 10s ease-in-out infinite;
+}
+
+@keyframes quantumShift {
+    0%, 100% { 
+        opacity: 0.5; 
+        transform: translate3d(0, 0, 0) scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: translate3d(0, 0, 0) scale(1.05); 
+    }
+}
+
+/* Interactive Buttons */
+.quantum-action-btn {
+    position: relative;
+    padding: 1rem 2rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 10px;
+    color: #00ffff;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.quantum-action-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.quantum-action-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.quantum-action-btn:hover {
+    transform: translate3d(0, -2px, 0) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+    border-color: rgba(0, 255, 255, 0.6);
+}
+
+/* Status Indicators */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: statusBlink 2s ease-in-out infinite;
+}
+
+.status-dot.online {
+    background: #00ff88;
+}
+
+.status-dot.warning {
+    background: #ffa500;
+}
+
+.status-dot.critical {
+    background: #ff4757;
+}
+
+@keyframes statusBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .voice-command-panel {
+        width: 250px;
+        right: -250px;
+    }
+    
+    .voice-command-panel.active {
+        right: 10px;
+    }
+    
+    .voice-toggle {
+        right: 10px;
+    }
+    
+    .analytics-overlay {
+        width: 200px;
+        left: 10px;
+        top: 80px;
+    }
+    
+    .quantum-scanner-widget {
+        width: 150px;
+        bottom: 80px;
+        left: 10px;
+    }
+    
+    .advanced-metrics {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .metric-pod {
+        padding: 1rem;
+    }
+    
+    .metric-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .metric-number {
+        font-size: 1.5rem;
+    }
+    
+    .metric-label {
+        font-size: 0.8rem;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .status-indicator {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .hologram-card {
+        padding: 1.5rem;
+        margin: 0.8rem 0;
+    }
+    
+    .interactive-timeline {
+        padding: 1.5rem 0;
+    }
+    
+    .timeline-event {
+        width: 35px;
+        height: 35px;
+        top: -17px;
+    }
+    
+    .quantum-action-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .voice-command-panel {
+        width: calc(100vw - 20px);
+        right: -100vw;
+        left: 10px;
+    }
+    
+    .voice-command-panel.active {
+        right: 0;
+    }
+    
+    .analytics-overlay {
+        width: calc(100vw - 20px);
+        left: 10px;
+    }
+    
+    .quantum-scanner-widget {
+        width: calc(100vw - 20px);
+        left: 10px;
+        bottom: 70px;
+    }
+    
+    .scanner-display {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+    }
+    
+    .scanner-radar {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .hologram-card {
+        padding: 1rem;
+    }
+    
+    .metric-pod {
+        padding: 0.8rem;
+        text-align: center;
+    }
+    
+    .metric-icon {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .metric-number {
+        font-size: 1.2rem;
+    }
+    
+    .quantum-action-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .timeline-event {
+        width: 30px;
+        height: 30px;
+        top: -15px;
+    }
+}
+
+/* Advanced Dashboard Enhancements */
+
+/* Predictive Analytics Node */
+.matrix-node[data-feature="predictive-analytics"] .analytics-display {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.prediction-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.prediction-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.prediction-item.high-risk {
+    background: rgba(255, 71, 87, 0.2);
+    border: 1px solid #ff4757;
+    color: #ff4757;
+}
+
+.prediction-item.medium-risk {
+    background: rgba(255, 165, 0, 0.2);
+    border: 1px solid #ffa500;
+    color: #ffa500;
+}
+
+/* Advanced Neural Threat Feed */
+.advanced-feed .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feed-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.feed-filter {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feed-filter.active,
+.feed-filter:hover {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+.threat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.threat-item.critical {
+    border-left-color: #ff4757;
+    background: rgba(255, 71, 87, 0.1);
+}
+
+.threat-item.blocked {
+    border-left-color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.threat-item.warning {
+    border-left-color: #ffa500;
+    background: rgba(255, 165, 0, 0.1);
+}
+
+.threat-severity {
+    width: 4px;
+    height: 40px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.severity-bar {
+    width: 100%;
+    height: 100%;
+    animation: severityPulse 2s ease-in-out infinite;
+}
+
+.severity-bar.critical {
+    background: linear-gradient(180deg, #ff4757, #ff3742);
+}
+
+.severity-bar.success {
+    background: linear-gradient(180deg, #00ff88, #00e676);
+}
+
+.severity-bar.warning {
+    background: linear-gradient(180deg, #ffa500, #ff9500);
+}
+
+@keyframes severityPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.threat-time {
+    min-width: 60px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.threat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.threat-location {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+.threat-action {
+    padding: 0.4rem 0.8rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    color: #00ffff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.threat-action:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.threat-action.success {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: rgba(0, 255, 136, 0.3);
+    color: #00ff88;
+    cursor: default;
+}
+
+/* Quantum System Matrix */
+.quantum-status .card-header .status-indicator.quantum {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+}
+
+.quantum-pulse {
+    width: 8px;
+    height: 8px;
+    background: #00ffff;
+    border-radius: 50%;
+    animation: quantumPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes quantumPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+.quantum-system-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.quantum-module {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quantum-module:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.module-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #00ffff;
+    font-size: 1.2rem;
+}
+
+.module-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.module-name {
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.module-status {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.module-status.operational {
+    color: #00ff88;
+}
+
+.module-status.active {
+    color: #00ffff;
+}
+
+.module-status.optimal {
+    color: #ffa500;
+}
+
+.module-status.fast {
+    color: #ff4757;
+}
+
+.quantum-meter {
+    position: relative;
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #00ff88);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.meter-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: meterScan 2s linear infinite;
+}
+
+@keyframes meterScan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.system-overview {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overview-stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #00ffff;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design for Advanced Features */
+@media (max-width: 768px) {
+    .feed-controls {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .threat-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .threat-severity {
+        width: 100%;
+        height: 4px;
+    }
+    
+    .quantum-system-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .quantum-module {
+        padding: 0.8rem;
+    }
+    
+    .system-overview {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .prediction-overlay {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .advanced-feed .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .feed-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .feed-filter {
+        flex: 1;
+        text-align: center;
+        padding: 0.4rem 0.5rem;
+    }
+    
+    .threat-item {
+        padding: 0.8rem;
+    }
+    
+    .threat-action {
+        align-self: stretch;
+        text-align: center;
+    }
+    
+    .quantum-module {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .quantum-meter {
+        width: 100%;
+    }
+}
+/* Advanced 3D Dashboard Features */
+
+/* 3D Threat Nexus */
+.matrix-node.advanced-3d {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(102, 126, 234, 0.1));
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.matrix-node.advanced-3d:hover {
+    transform: rotateY(5deg) rotateX(2deg) translateZ(10px);
+}
+
+.holographic-3d-map {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.holographic-3d-map::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+    animation: hologramSweep 4s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes hologramSweep {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+.threat-layers {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.layer-control {
+    padding: 0.3rem 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.layer-control.active,
+.layer-control:hover {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: #00ffff;
+    color: #00ffff;
+    transform: scale(1.05);
+}
+
+.threat-stats {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.stat-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+/* Neural Consciousness Matrix */
+.matrix-node.neural-enhanced {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(118, 75, 162, 0.1));
+    border: 2px solid rgba(0, 255, 136, 0.3);
+}
+
+.neural-brain-chamber {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.neural-activity {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.activity-node {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.activity-node.active {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    border: 1px solid rgba(0, 255, 136, 0.4);
+}
+
+.node-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.activity-node.active .node-pulse {
+    background: #00ff88;
+    animation: nodePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+.consciousness-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.metric-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.metric-title {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+.iq-meter {
+    position: relative;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.iq-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff88, #00ffff);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.iq-value {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.learning-indicator {
+    position: relative;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.learning-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 10px;
+    animation: learningPulse 2s ease-in-out infinite;
+}
+
+@keyframes learningPulse {
+    0%, 100% { width: 70%; }
+    50% { width: 100%; }
+}
+
+.learning-value {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+    .matrix-node.advanced-3d:hover {
+        transform: none;
+    }
+    
+    .threat-layers {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .threat-stats {
+        position: static;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .neural-activity {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .consciousness-metrics {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .holographic-3d-map,
+    .neural-brain-chamber {
+        padding: 0.8rem;
+    }
+    
+    .layer-control,
+    .activity-node {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.6rem;
+    }
+    
+    .stat-count {
+        font-size: 1rem;
+    }
+    
+    .stat-label {
+        font-size: 0.6rem;
+    }
+    
+    .iq-meter,
+    .learning-indicator {
+        height: 16px;
+    }
+    
+    .iq-value,
+    .learning-value {
+        font-size: 0.7rem;
+        right: 5px;
+    }
+}
+/* Radar Display Styles */
+.radar-display {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 50%;
+    background: linear-gradient(to top, transparent, #00ffff);
+    transform-origin: bottom;
+    transform: translate(-50%, -100%) rotate(0deg);
+    animation: radarSweep 3s linear infinite;
+}
+
+.radar-blip {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: blipPulse 2s ease-in-out infinite;
+}
+
+.radar-blip.critical {
+    background: #ff4757;
+    box-shadow: 0 0 10px #ff4757;
+}
+
+.radar-blip.high {
+    background: #ffa500;
+    box-shadow: 0 0 8px #ffa500;
+}
+
+.radar-blip.medium {
+    background: #00ffff;
+    box-shadow: 0 0 6px #00ffff;
+}
+
+@keyframes radarSweep {
+    0% { transform: translate(-50%, -100%) rotate(0deg); }
+    100% { transform: translate(-50%, -100%) rotate(360deg); }
+}
+
+@keyframes blipPulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 0.8; 
+    }
+    50% { 
+        transform: scale(1.5); 
+        opacity: 1; 
+    }
+}
+
+/* Node Connections */
+.node-connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.connection {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
+    animation: connectionFlow 4s ease-in-out infinite;
+}
+
+.connection.c1 {
+    height: 60px;
+    top: -30px;
+    right: -20px;
+    transform: rotate(45deg);
+    animation-delay: 0s;
+}
+
+.connection.c2 {
+    height: 40px;
+    bottom: -20px;
+    left: -15px;
+    transform: rotate(-30deg);
+    animation-delay: 1s;
+}
+
+.connection.c3 {
+    height: 50px;
+    top: -25px;
+    left: -18px;
+    transform: rotate(-45deg);
+    animation-delay: 2s;
+}
+
+.connection.c4 {
+    height: 45px;
+    bottom: -22px;
+    right: -16px;
+    transform: rotate(30deg);
+    animation-delay: 3s;
+}
+
+.connection.c5 {
+    height: 55px;
+    top: -28px;
+    right: -22px;
+    transform: rotate(60deg);
+    animation-delay: 0.5s;
+}
+
+.connection.c6 {
+    height: 35px;
+    bottom: -18px;
+    left: -12px;
+    transform: rotate(-60deg);
+    animation-delay: 1.5s;
+}
+
+@keyframes connectionFlow {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(1) rotate(var(--rotation, 0deg)); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.1) rotate(var(--rotation, 0deg)); 
+    }
+}
+
+/* Enhanced Dashboard Animations */
+.dashboard-quantum-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dashboard-hero-advanced {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.advanced-control-center {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.control-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.control-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.control-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.control-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.control-panel {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-panel h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-switches {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.switch-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.quantum-switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quantum-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.quantum-switch.active {
+    background: linear-gradient(45deg, #00ffff, #0080ff);
+}
+
+.quantum-switch.active::after {
+    transform: translateX(25px);
+}
+
+.quick-actions {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-actions h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid;
+    border-radius: 12px;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn.critical {
+    border-color: #ff4757;
+    color: #ff4757;
+}
+
+.action-btn.critical:hover {
+    background: rgba(255, 71, 87, 0.1);
+    transform: translateY(-2px);
+}
+
+.action-btn.primary {
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+.action-btn.primary:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.action-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Dashboard */
+@media (max-width: 768px) {
+    .quantum-matrix {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .control-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .radar-display {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .advanced-control-center {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .action-buttons {
+        gap: 0.8rem;
+    }
+    
+    .action-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-hero-advanced {
+        padding: 2rem 0;
+    }
+    
+    .quantum-title {
+        font-size: 2.5rem;
+    }
+    
+    .quantum-metrics {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .radar-display {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .control-panel,
+    .quick-actions {
+        padding: 1rem;
+    }
+    
+    .switch-item {
+        padding: 0.6rem;
+    }
+    
+    .action-btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+    }
+}

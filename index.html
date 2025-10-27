@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield AI - Your AI-Powered Cyber Guardian</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="advanced-animations.css">
+    <link rel="stylesheet" href="quantum-loader.css">
+    <link rel="stylesheet" href="advanced-features.css">
+    <link rel="stylesheet" href="scanner-advanced.css">
+    <link rel="stylesheet" href="advanced-scanners.css">
+    <link rel="stylesheet" href="mobile-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberShield AI</span>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="tutorial.html" class="nav-link">Tutorial</a>
+                <a href="index.html" class="nav-link active">Scanner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="assistant.html" class="nav-link">AI Assistant</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Your AI-Powered Cyber Guardian</h1>
+                <p>Scan URLs, analyze messages, and check phone numbers for threats with advanced AI technology</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number" id="scans-today">1,247</span>
+                        <span class="stat-label">Scans Today</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="threats-blocked">89</span>
+                        <span class="stat-label">Threats Blocked</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.8%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Features Panel -->
+        <div id="network-monitor" class="network-monitor"></div>
+        
+        <!-- Scanner Section -->
+        <section id="scanner" class="scanner-section">
+            <div class="scanner-header">
+                <h2>Advanced Security Scanner</h2>
+                <p>Powered by AI to detect threats in real-time</p>
+            </div>
+            
+            <div class="scanner-tabs">
+                <button class="tab-btn active" data-tab="url">
+                    <div class="tab-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Website Scanner</span>
+                        <span class="tab-desc">Check URLs for threats</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="message">
+                    <div class="tab-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Message Analyzer</span>
+                        <span class="tab-desc">Detect phishing emails</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="phone">
+                    <div class="tab-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Phone Checker</span>
+                        <span class="tab-desc">Verify caller safety</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="file">
+                    <div class="tab-icon">
+                        <i class="fas fa-file-shield"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">File Scanner</span>
+                        <span class="tab-desc">Malware detection</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="password">
+                    <div class="tab-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Password Generator</span>
+                        <span class="tab-desc">Secure passwords</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="vulnerability">
+                    <div class="tab-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Vulnerability Scanner</span>
+                        <span class="tab-desc">System security audit</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="network">
+                    <div class="tab-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Network Monitor</span>
+                        <span class="tab-desc">Real-time monitoring</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+                <button class="tab-btn" data-tab="audit">
+                    <div class="tab-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="tab-info">
+                        <span class="tab-title">Security Audit</span>
+                        <span class="tab-desc">Comprehensive security assessment</span>
+                    </div>
+                    <div class="tab-indicator"></div>
+                </button>
+            </div>
+
+            <!-- URL Scanner -->
+            <div class="tab-content active" id="url-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3>Website Safety Scanner</h3>
+                            <p>Advanced AI-powered URL analysis and threat detection</p>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <i class="fas fa-link input-icon"></i>
+                            <input type="url" id="url-input" placeholder="Enter website URL (e.g., https://example.com)">
+                            <div class="input-glow"></div>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="scanURL()">
+                            <span class="btn-content">
+                                <i class="fas fa-search"></i>
+                                <span>Scan Now</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-check"></i>
+                            <span>SSL Verification</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-database"></i>
+                            <span>Threat Database</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Analysis</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="url-result"></div>
+                </div>
+            </div>
+
+            <!-- Message Analyzer -->
+            <div class="tab-content" id="message-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Message & Email Analyzer</h3>
+                            <p>NLP-powered phishing and scam detection</p>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="textarea-wrapper">
+                            <i class="fas fa-comment-dots input-icon"></i>
+                            <textarea id="message-input" placeholder="Paste your message or email content here..."></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="analyzeMessage()">
+                            <span class="btn-content">
+                                <i class="fas fa-brain"></i>
+                                <span>Analyze</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-language"></i>
+                            <span>NLP Analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Scam Detection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-fishing-hook"></i>
+                            <span>Phishing Check</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="message-result"></div>
+                </div>
+            </div>
+
+            <!-- Phone Checker -->
+            <div class="tab-content" id="phone-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone Number Safety Check</h3>
+                            <p>Comprehensive caller verification and spam detection</p>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <i class="fas fa-phone input-icon"></i>
+                            <input type="tel" id="phone-input" placeholder="Enter phone number (e.g., +1-555-123-4567)">
+                            <div class="input-glow"></div>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="checkPhone()">
+                            <span class="btn-content">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Check</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-database"></i>
+                            <span>Spam Database</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Location Check</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>User Reports</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="phone-result"></div>
+                </div>
+            </div>
+
+            <!-- File Scanner -->
+            <div class="tab-content" id="file-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-file-shield"></i>
+                        </div>
+                        <div>
+                            <h3>File Security Scanner</h3>
+                            <p>Advanced malware detection and file analysis</p>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="file-input" accept="*/*" style="display: none;">
+                            <div class="file-drop-zone" onclick="document.getElementById('file-input').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload or drag & drop files</span>
+                                <div class="file-info" id="file-info" style="display: none;"></div>
+                            </div>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="scanFile()">
+                            <span class="btn-content">
+                                <i class="fas fa-shield-virus"></i>
+                                <span>Scan File</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-virus"></i>
+                            <span>Malware Detection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-fingerprint"></i>
+                            <span>Hash Analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-microscope"></i>
+                            <span>Deep Inspection</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="file-result"></div>
+                </div>
+            </div>
+
+            <!-- Password Generator -->
+            <div class="tab-content" id="password-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div>
+                            <h3>Secure Password Generator</h3>
+                            <p>Generate cryptographically secure passwords</p>
+                        </div>
+                    </div>
+                    <div class="password-controls">
+                        <div class="control-group">
+                            <label>Length: <span id="length-value">16</span></label>
+                            <input type="range" id="password-length" min="8" max="64" value="16">
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" id="include-uppercase" checked> Uppercase (A-Z)</label>
+                            <label><input type="checkbox" id="include-lowercase" checked> Lowercase (a-z)</label>
+                            <label><input type="checkbox" id="include-numbers" checked> Numbers (0-9)</label>
+                            <label><input type="checkbox" id="include-symbols" checked> Symbols (!@#$)</label>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="generatePassword()">
+                            <span class="btn-content">
+                                <i class="fas fa-magic"></i>
+                                <span>Generate</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="result-container" id="password-result"></div>
+                </div>
+            </div>
+
+            <!-- Vulnerability Scanner -->
+            <div class="tab-content" id="vulnerability-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div>
+                            <h3>Vulnerability Assessment</h3>
+                            <p>Comprehensive security audit and vulnerability detection</p>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <i class="fas fa-server input-icon"></i>
+                            <input type="text" id="target-input" placeholder="Enter IP address or domain (e.g., 192.168.1.1)">
+                            <div class="input-glow"></div>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="scanVulnerabilities()">
+                            <span class="btn-content">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Scan</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-door-open"></i>
+                            <span>Port Scanning</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-virus"></i>
+                            <span>CVE Detection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Risk Assessment</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="vulnerability-result"></div>
+                </div>
+            </div>
+
+            <!-- Network Monitor -->
+            <div class="tab-content" id="network-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <h3>Real-time Network Monitor</h3>
+                            <p>Live network traffic analysis and threat detection</p>
+                        </div>
+                    </div>
+                    <div class="network-controls">
+                        <button class="scan-btn enhanced" onclick="startNetworkMonitoring()">
+                            <span class="btn-content">
+                                <i class="fas fa-play"></i>
+                                <span>Start Monitoring</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <button class="scan-btn enhanced" onclick="stopNetworkMonitoring()">
+                            <span class="btn-content">
+                                <i class="fas fa-stop"></i>
+                                <span>Stop</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-eye"></i>
+                            <span>Traffic Analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Anomaly Detection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-area"></i>
+                            <span>Bandwidth Monitor</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="network-result"></div>
+                </div>
+            </div>
+
+            <!-- Security Audit -->
+            <div class="tab-content" id="audit-tab">
+                <div class="scanner-card">
+                    <div class="scanner-header-card">
+                        <div class="scanner-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h3>Comprehensive Security Audit</h3>
+                            <p>Complete system security assessment and compliance check</p>
+                        </div>
+                    </div>
+                    <div class="audit-options">
+                        <div class="audit-type-selector">
+                            <label><input type="radio" name="audit-type" value="quick" checked> Quick Audit (2 min)</label>
+                            <label><input type="radio" name="audit-type" value="standard"> Standard Audit (5 min)</label>
+                            <label><input type="radio" name="audit-type" value="comprehensive"> Comprehensive Audit (10 min)</label>
+                        </div>
+                        <button class="scan-btn enhanced" onclick="startSecurityAudit()">
+                            <span class="btn-content">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Start Audit</span>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                    <div class="scan-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Posture</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Compliance Check</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cogs"></i>
+                            <span>Configuration Review</span>
+                        </div>
+                    </div>
+                    <div class="result-container" id="audit-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="tutorial.html" class="nav-link">Tutorial</a>
+            <a href="index.html" class="nav-link active">Scanner</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="assistant.html" class="nav-link">AI Assistant</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+
+        <!-- AI Help Box -->
+        <div class="ai-help-box" id="ai-help-box">
+            <div class="help-toggle" onclick="toggleHelpBox()">
+                <i class="fas fa-robot"></i>
+                <span>AI Help</span>
+            </div>
+            <div class="help-content" id="help-content">
+                <div class="help-header">
+                    <div class="help-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="help-info">
+                        <h4>CyberBot Assistant</h4>
+                        <p>Quick cybersecurity help</p>
+                    </div>
+                    <button class="help-close" onclick="toggleHelpBox()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="help-chat" id="help-chat">
+                    <div class="help-message bot">
+                        <div class="help-msg-content">
+                            👋 Hi! Need quick help with cybersecurity? Ask me anything!
+                        </div>
+                    </div>
+                </div>
+                <div class="help-input-group">
+                    <input type="text" id="help-input" placeholder="Ask about security...">
+                    <button class="help-send" onclick="sendHelpMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner">
+                <div class="radar-scanner">
+                    <div class="radar-sweep"></div>
+                </div>
+                <p>Scanning for threats...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="enhanced-scanner.js"></script>
+    <script src="scanner-ai-integration.js"></script>
+    <script src="scanner-compatibility.js"></script>
+    <script src="advanced-scanners.js"></script>
+    <script src="mobile-responsive.js"></script>
+    <script src="fix-all.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CyberShield AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quantum-pages.css">
+    <link rel="stylesheet" href="advanced-pages.css">
+    <link rel="stylesheet" href="mobile-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animass="shapation">
+        <div class="floating-shapes">
+            <div cle shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberShield AI</span>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="tutorial.html" class="nav-link">Tutorial</a>
+                <a href="index.html" class="nav-link">Scanner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="assistant.html" class="nav-link">AI Assistant</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <!-- Quantum Hero Section -->
+        <section class="quantum-hero">
+            <div class="hero-quantum-field">
+                <canvas id="heroCanvas" width="1200" height="600"></canvas>
+                <div class="quantum-particles">
+                    <div class="q-particle"></div>
+                    <div class="q-particle"></div>
+                    <div class="q-particle"></div>
+                    <div class="q-particle"></div>
+                </div>
+            </div>
+            <div class="hero-content-advanced">
+                <div class="hero-badge">
+                    <div class="badge-core"></div>
+                    <span>QUANTUM SECURITY NEXUS</span>
+                </div>
+                <h1 class="quantum-title" data-text="CyberShield AI Quantum">CyberShield AI Quantum</h1>
+                <p class="hero-subtitle">Next-generation quantum-powered cybersecurity with AI consciousness and dimensional threat analysis</p>
+                <div class="quantum-actions">
+                    <button class="quantum-btn primary" onclick="initQuantumScan()">
+                        <div class="btn-core"></div>
+                        <i class="fas fa-atom"></i>
+                        <span>Quantum Scan</span>
+                    </button>
+                    <button class="quantum-btn secondary" onclick="activateAI()">
+                        <div class="btn-core"></div>
+                        <i class="fas fa-brain"></i>
+                        <span>AI Consciousness</span>
+                    </button>
+                </div>
+                <div class="quantum-metrics">
+                    <div class="metric-orb">
+                        <div class="orb-core"></div>
+                        <div class="metric-data">
+                            <span class="metric-value">∞</span>
+                            <span class="metric-label">Quantum Scans</span>
+                        </div>
+                    </div>
+                    <div class="metric-orb">
+                        <div class="orb-core"></div>
+                        <div class="metric-data">
+                            <span class="metric-value">847K</span>
+                            <span class="metric-label">Threats Neutralized</span>
+                        </div>
+                    </div>
+                    <div class="metric-orb">
+                        <div class="orb-core"></div>
+                        <div class="metric-data">
+                            <span class="metric-value">99.99%</span>
+                            <span class="metric-label">Quantum Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quantum Features Matrix -->
+        <section class="quantum-features">
+            <div class="features-header">
+                <h2 class="matrix-title">Quantum Security Matrix</h2>
+                <p>Dimensional threat protection powered by quantum AI consciousness</p>
+            </div>
+            
+            <div class="quantum-matrix">
+                <div class="matrix-node" data-feature="scanner">
+                    <div class="node-core">
+                        <div class="core-animation"></div>
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="node-data">
+                        <h3>Quantum Scanner</h3>
+                        <p>Multi-dimensional threat analysis across parallel realities</p>
+                        <div class="node-metrics">
+                            <span>∞ Dimensions</span>
+                            <span>99.99% Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="node-connections">
+                        <div class="connection c1"></div>
+                        <div class="connection c2"></div>
+                    </div>
+                </div>
+                
+                <div class="matrix-node" data-feature="ai">
+                    <div class="node-core">
+                        <div class="core-animation"></div>
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="node-data">
+                        <h3>AI Consciousness</h3>
+                        <p>Sentient artificial intelligence with quantum awareness</p>
+                        <div class="node-metrics">
+                            <span>Sentient Level</span>
+                            <span>∞ IQ</span>
+                        </div>
+                    </div>
+                    <div class="node-connections">
+                        <div class="connection c3"></div>
+                        <div class="connection c4"></div>
+                    </div>
+                </div>
+                
+                <div class="matrix-node" data-feature="nexus">
+                    <div class="node-core">
+                        <div class="core-animation"></div>
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="node-data">
+                        <h3>Threat Nexus</h3>
+                        <p>Quantum entangled global threat monitoring network</p>
+                        <div class="node-metrics">
+                            <span>Global Coverage</span>
+                            <span>Real-time</span>
+                        </div>
+                    </div>
+                    <div class="node-connections">
+                        <div class="connection c5"></div>
+                        <div class="connection c6"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quantum Activation Protocol -->
+        <section class="quantum-protocol">
+            <div class="protocol-header">
+                <h2>Quantum Activation Protocol</h2>
+                <p>Initialize your quantum security consciousness in three dimensional steps</p>
+            </div>
+            
+            <div class="protocol-sequence">
+                <div class="protocol-step active">
+                    <div class="step-quantum-core">
+                        <div class="quantum-number">Φ</div>
+                        <div class="step-energy"></div>
+                    </div>
+                    <div class="step-data">
+                        <h4>Quantum Entanglement</h4>
+                        <p>Establish quantum connection with the security nexus</p>
+                        <div class="step-progress">
+                            <div class="progress-wave"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="protocol-step">
+                    <div class="step-quantum-core">
+                        <div class="quantum-number">∞</div>
+                        <div class="step-energy"></div>
+                    </div>
+                    <div class="step-data">
+                        <h4>Consciousness Sync</h4>
+                        <p>Synchronize with AI consciousness for threat analysis</p>
+                        <div class="step-progress">
+                            <div class="progress-wave"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="protocol-step">
+                    <div class="step-quantum-core">
+                        <div class="quantum-number">Ω</div>
+                        <div class="step-energy"></div>
+                    </div>
+                    <div class="step-data">
+                        <h4>Dimensional Protection</h4>
+                        <p>Activate multi-dimensional security shield matrix</p>
+                        <div class="step-progress">
+                            <div class="progress-wave"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Security Metrics -->
+        <section class="advanced-metrics">
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="metric-number">99.99%</div>
+                <div class="metric-label">Quantum Accuracy</div>
+            </div>
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-bolt"></i></div>
+                <div class="metric-number">0.001ms</div>
+                <div class="metric-label">Response Time</div>
+            </div>
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-globe"></i></div>
+                <div class="metric-number">847K</div>
+                <div class="metric-label">Global Threats Blocked</div>
+            </div>
+            <div class="metric-pod">
+                <div class="metric-icon"><i class="fas fa-brain"></i></div>
+                <div class="metric-number">∞</div>
+                <div class="metric-label">AI Consciousness Level</div>
+            </div>
+        </section>
+
+        <!-- Status Grid -->
+        <section class="status-grid">
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Quantum Core Online</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>AI Consciousness Active</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Threat Detection Active</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Dimensional Shield Up</span>
+            </div>
+        </section>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="home.html" class="nav-link active">Home</a>
+            <a href="tutorial.html" class="nav-link">Tutorial</a>
+            <a href="index.html" class="nav-link">Scanner</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="assistant.html" class="nav-link">AI Assistant</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+
+        <!-- AI Help Box -->
+        <div class="ai-help-box" id="ai-help-box">
+            <div class="help-toggle" onclick="toggleHelpBox()">
+                <i class="fas fa-robot"></i>
+                <span>AI Help</span>
+            </div>
+            <div class="help-content" id="help-content">
+                <div class="help-header">
+                    <div class="help-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="help-info">
+                        <h4>CyberBot Assistant</h4>
+                        <p>Quick cybersecurity help</p>
+                    </div>
+                    <button class="help-close" onclick="toggleHelpBox()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="help-chat" id="help-chat">
+                    <div class="help-message bot">
+                        <div class="help-msg-content">
+                            👋 Hi! Need quick help with cybersecurity? Ask me anything!
+                        </div>
+                    </div>
+                </div>
+                <div class="help-input-group">
+                    <input type="text" id="help-input" placeholder="Ask about security...">
+                    <button class="help-send" onclick="sendHelpMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mobile-responsive.js"></script>
+    <script src="script.js"></script>
+    <script src="fix-all.js"></script>
+    <script>
+        function initQuantumScan() {
+            window.location.href = 'index.html';
+        }
+        
+        function activateAI() {
+            window.location.href = 'assistant.html';
+        }
+        
+        function toggleHelpBox() {
+            const helpContent = document.getElementById('help-content');
+            helpContent.classList.toggle('show');
+        }
+        
+        function sendHelpMessage() {
+            const input = document.getElementById('help-input');
+            const chat = document.getElementById('help-chat');
+            
+            if (input.value.trim()) {
+                const userMsg = document.createElement('div');
+                userMsg.className = 'help-message user';
+                userMsg.innerHTML = `<div class="help-msg-content">${input.value}</div>`;
+                chat.appendChild(userMsg);
+                
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'help-message bot';
+                    botMsg.innerHTML = `<div class="help-msg-content">🔒 For detailed help, visit our AI Assistant page!</div>`;
+                    chat.appendChild(botMsg);
+                    chat.scrollTop = chat.scrollHeight;
+                }, 1000);
+                
+                input.value = '';
+                chat.scrollTop = chat.scrollHeight;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const helpInput = document.getElementById('help-input');
+            if (helpInput) {
+                helpInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') sendHelpMessage();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
